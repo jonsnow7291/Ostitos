@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Registro</title>
     <link rel="shortcut icon" href="/Pagina Web/Imagenes/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -51,37 +51,37 @@
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
                         </div>
-                        <input type="text" placeholder="Primer Nombre" class="input-control">
+                        <input type="text" placeholder="Primer Nombre" class="input-control"required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
                         </div>
-                        <input type="text" placeholder="Primer apellido" class="input-control">
+                        <input type="text" placeholder="Primer apellido" class="input-control"required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-video2"></i>
                         </div>
-                        <input type="text" placeholder="Nombre de usuario" class="input-control">
+                        <input type="text" placeholder="Nombre de usuario" class="input-control"required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-telephone-plus"></i>
                         </div>
-                        <input type="text" placeholder="Numero telefonico" class="input-control">
+                        <input type="text" placeholder="Numero telefonico" class="input-control"required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-shield-lock-fill"></i>
                         </div>
-                        <input type="password" placeholder="Contraseña" class="input-control">    
+                        <input type="password" placeholder="Contraseña" class="input-control"minlength="8"required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-shield-check"></i>
                         </div>
-                        <input type="password" placeholder="Igrese su contraeña de nuevo" class="input-control">    
+                        <input type="password" placeholder="Ingrese su contraeña de nuevo" class="input-control" minlength="8" required>    
                     </div>
                     <button type="submit" class="btm">Registrarse</button>
                 </form>
