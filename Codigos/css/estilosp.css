@@ -1,3 +1,27 @@
+:root{
+    --green: hsl(162, 45%, 56%);
+    --lead: hsl(162, 2%, 56%);
+    --blue: hsl(220, 85%, 57%);
+    --violet: hsl(272, 92, 32%);
+    --text-white: hsl(0, 0%, 100%);
+    --text-black: hsl(0, 0%, 0%);
+    --text-linght-gray: hsl(0, 0%, 90%);
+    --body-bg-color: hsl(200, 51%, 47%);
+    --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+    --border-color-lead: hsla(0, 0%, 100%, 0.25);
+    --border-color-black: hsla(0, 0%, 0%, 0.25);
+    --blur: blur(10px);
+    --button-hover-color: hsla(0, 0%, 0%, 0.3);
+}
+.body{
+    background-color: #00869b;
+    color: var(--text-linght-gray);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
 .navbar-nav a{
     font-size: 20px;
     text-transform: uppercase;
@@ -18,12 +42,43 @@ letter-spacing: 2px;
     margin-left: 40px;
 }
 .text{
-    margin-top: -526px;
-    margin-left: 550px;
+    margin-top: -678px;
+    margin-left: 620px;
 }
 .text1{
-    margin-left: 530px; 
+    margin-left: 620px; 
 }
 .boton{
-    margin-left: 550px;
+    margin-left: 620px;
 }
+.imagenes-pequeñas{
+    width: 100px;
+    height: 100px;
+    margin-top: -975px;
+    margin-left: 545px;
+}
+.img-1{
+    width: 100px;
+    height: 100px;
+    margin-top: -822px;
+    margin-left: 545px;
+}
+.img-2{
+    width: 100px;
+    height: 100px;
+    margin-top: -668px;
+    margin-left: 545px;
+}
+.img-3{
+    width: 100px;
+    height: 100px;
+    margin-top: -512px;
+    margin-left: 545px;
+}
+.img-4{
+    width: 100px;
+    height: 100px;
+    margin-top: -357px;
+    margin-left: 545px;
+}
+
