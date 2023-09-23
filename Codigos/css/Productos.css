@@ -17,7 +17,6 @@
 }
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,38 +25,31 @@
 body{
     background-color: var(--body-bg-color);
     color: var(--text-linght-gray);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    overflow-x: hidden;
 }
-.Tittle_products{
+.navbar-nav a{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-brand {
+color: rgb(253, 6, 6);
+font-size: 30px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 2px;
+}   
+.filtro{
+    font-size: 15px;
+    color: #bababa;
+}
+.precio{
+    font-weight: 700;
+    color: rgb(52, 49, 49);
+}
+.titulo{
     text-align: center;
-    margin-top: 5%;
+    padding: 10%;
+    font-size: 38px;
 }
-.earphones_contenedor{
-    text-align: center;
-    background-color: rgb(13, 7, 66);
-    max-width: 400px;
-    height: 500px;
-    border-radius: 30px;
-    float: left;
-    margin: 5% 1.5%;
-}
-.contacto_carrito{
-    text-align: center;
-}
-.buttons_carrito{
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    height: 40px;
-    width: 250px;
-    background-color: rgb(10, 77, 77);
-    color: aliceblue;
-}
-.buttons_carrito:hover{
-    color: black;
-    background-color: aquamarine;
-}
+
