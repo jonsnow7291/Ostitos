@@ -1,3 +1,11 @@
+<?php
+     /*aqui hacemos la conexion a la base de datos  */
+     $User = "Diego";
+     $Password = "15082004";
+     $Serv = "localhost";
+     $db = "ostitos";
+     $conect = mysqli_connect($Serv,$User,$Password,$db);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,44 +48,56 @@
         <div class="form-content">
             <div class="box">
                 <h3>Bienvenido</h3>
-                <form action="">
+                <form action="registro.php" method="post">
+                <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <input type="number" min="1" max="3" placeholder="Rol Usuario" name="rol" class="input-control" required>
+                    </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
                         </div>
-                        <input type="text" placeholder="Primer Nombre" class="input-control" required>
+                        <input type="text" placeholder="Primer Nombre" name="nombre" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
                         </div>
-                        <input type="text" placeholder="Primer apellido" class="input-control" required>
-                    </div>
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-person-video2"></i>
-                        </div>
-                        <input type="text" placeholder="Nombre de usuario" class="input-control" required>
-                    </div>
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-telephone-plus"></i>
-                        </div>
-                        <input type="text" placeholder="Numero telefonico" class="input-control" required>
+                        <input type="text" placeholder="Primer apellido" name="apellido" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-shield-lock-fill"></i>
                         </div>
-                        <input type="password" placeholder="Contraseña" class="input-control" required>    
+                        <input type="number" placeholder="Edad" name="edad" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-shield-check"></i>
+                            <i class="bi bi-person-video2"></i>
                         </div>
-                        <input type="password" placeholder="Ingrese su contraeña de nuevo" class="input-control" required>    
+                        <input type="text" placeholder="Nombre de usuario" name="nickname" class="input-control" required>
                     </div>
-                    <button type="submit" class="btm">Registrarse</button>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-person-video2"></i>
+                        </div>
+                        <input type="Email" placeholder="Correo Usuario" name="email" class="input-control" required>
+                    </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-telephone-plus"></i>
+                        </div>
+                        <input type="text" placeholder="Numero telefonico" name="telefono" class="input-control" required>
+                    </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <input type="password" placeholder="Contraseña" name="contraseña" class="input-control" required>    
+                    </div>
+                    <button type="submit" class="btm"name="Registro" >Registrarse</button>
                 </form>
                 <p>Ya tienes una cuenta? <a href="/Codigos/login.html"> Inicia sesion</a></p>
             </div>
@@ -88,3 +108,18 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+<?php
+    if(isset($_POST["Registro"])){
+         /*aqui hacemos el procedimiento para meter nuestros datos*/
+        $Rol =$_POST["rol"];
+        $Nombre =$_POST["nombre"];
+        $Apellido =$_POST["apellido"];
+        $Edad =$_POST["edad"];
+        $Apodo =$_POST["nickname"];
+        $Email =$_POST["email"];
+        $Telefono = $_POST["telefono"];
+        $Contraseña =$_POST["contraseña"];
+        $insertarDatos = ("insert into usuario values('','$Rol','$Nombre','$Apellido','$Edad','$Apodo','$Email','$Telefono','$Contraseña')");
+        $ejecucion = mysqli_query($conect,$insertarDatos);
+    }
+?>
