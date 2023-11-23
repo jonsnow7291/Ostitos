@@ -15,7 +15,7 @@
                         header("location:Inicio.HTML");
                     }
                     else{
-                        echo "ACCESO DENEGADO";
+                        echo "<h5>DATOS INCORRECTOS</h5>";
                     }
                 }
             }
