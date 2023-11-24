@@ -35,34 +35,38 @@
             </div>
         </div>
     </nav>
-    
     <section class="form-main">
         <div class="form-content">
             <div class="box">
                 <h3>Bienvenido</h3>
-                <form action="">
+                <form action="login.php" method="post">
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
                         </div>
-                        <input type="email" placeholder="Email" class="input-control" required>
+                        <input type="text" placeholder="Email" class="input-control" name="Correo"  >
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-shield-lock-fill"></i>
                         </div>
-                        <input type="password" placeholder="Password" class="input-control" required>
+                        <input type="password" placeholder="Password" class="input-control" name="Contraseña" >
+                        <div>
+                            <?php include ("Conexion.php");
+                                include ("controlador.php")
+                            ?>
+                        </div>
                         <div class="input-link">
                             <a href="#" class="gradient-text">Has Olvidado tu contraseña</a>
                         </div>
                     </div>
-                    <button type="submit" class="btm">Iniciar Sesion</button>
+                    <button type="submit" class="btm" name="btnlog">Iniciar Sesion</button>
                 </form>
-                <p>No tienes una cuenta? <a href="/Codigos/registro.html"> Crear cuenta</a></p>
+                <p>No tienes una cuenta? <a href="/Codigos/registro.php"> Crear cuenta</a></p>
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
