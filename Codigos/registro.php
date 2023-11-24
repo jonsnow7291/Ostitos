@@ -1,11 +1,3 @@
-<?php
-     /*aqui hacemos la conexion a la base de datos  */
-     $User = "Diego";
-     $Password = "15082004";
-     $Serv = "localhost";
-     $db = "ostitos";
-     $conect = mysqli_connect($Serv,$User,$Password,$db);
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,7 +26,7 @@
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.html" class="nav-link">Inicio de Sesion</a>
+                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
                         <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
@@ -109,8 +101,7 @@
 </body>
 </html>
 <?php
-    if(isset($_POST["Registro"])){
-         /*aqui hacemos el procedimiento para meter nuestros datos*/
+    include ('Conexion.php');
         $Rol =$_POST["rol"];
         $Nombre =$_POST["nombre"];
         $Apellido =$_POST["apellido"];
@@ -119,7 +110,12 @@
         $Email =$_POST["email"];
         $Telefono = $_POST["telefono"];
         $Contraseña =$_POST["contraseña"];
-        $insertarDatos = ("insert into usuario values('','$Rol','$Nombre','$Apellido','$Edad','$Apodo','$Email','$Telefono','$Contraseña')");
+    if(isset($_POST["Registro"])){
+        if(($Edad<=100)&&($Edad>=18)){
+         /*aqui hacemos el procedimiento para meter nuestros datos*/
+        $insertarDatos = ("insert into usuario (RolUsu,NombreUsu,ApellidoUsu,EdadUsu,NicknameUsu,CorreoUsu,TelefonoUsu,ContraseñaUsu) values('$Rol','$Nombre','$Apellido','$Edad','$Apodo','$Email','$Telefono','$Contraseña')");
         $ejecucion = mysqli_query($conect,$insertarDatos);
+        }
+        else{ echo "<h5>EDAD INVALIDA (EDAD VALIDA 18 - 99)</h5>"; }
     }
 ?>
