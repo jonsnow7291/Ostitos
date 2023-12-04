@@ -56,7 +56,8 @@
                         </div>
                         <input type="password" placeholder="Password" class="input-control" name="Contraseña" >
                         <div>
-                            <?php include ("Conexion.php");
+                            <?php   
+                                include ("Conexion.php");
                                 include ("ControladorLogin.php")
                             ?>
                         </div>
