@@ -25,9 +25,7 @@
                         <a href="/Codigos/Inicio.html" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.html" class="nav-link">Inicio de Sesion</a>
-                        </li>
+ 
                         <li class="nav-item">    
                         <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
                     </li>
@@ -44,6 +42,12 @@
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
                         </div>
+                        <input type="text" placeholder="Rol" class="input-control" name="RolUsu">
+                    </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
                         <input type="text" placeholder="Email" class="input-control" name="Correo"  >
                     </div>
                     <div class="input-box">
@@ -53,7 +57,7 @@
                         <input type="password" placeholder="Password" class="input-control" name="Contraseña" >
                         <div>
                             <?php include ("Conexion.php");
-                                include ("controlador.php")
+                                include ("ControladorLogin.php")
                             ?>
                         </div>
                         <div class="input-link">
