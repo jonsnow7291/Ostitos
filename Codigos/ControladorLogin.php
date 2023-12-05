@@ -20,17 +20,22 @@
                         /* envio de Usuarios A inicio Segun respectivo rol */
                         $fila = $Resultid->fetch_assoc();
                         $IdUsu = $fila['IdUsu'];
-                            if($datos=$sql->fetch_object()){
-                                if ($RolUsu==1) {
-                                    header("location:InicioAdmin.php?IdUsu='$IdUsu'");
-                                } elseif($RolUsu==2) {
-                                    header("location:InicioCliente.php?IdUsu='$IdUsu'");
-                                }elseif($RolUsu==3){
-                                    header("location:InicioAdminTrabajador.php?IdUsu='$IdUsu'");
-                                }
-                            }else{
-                                echo "<h5>Datos incorrectos</h5>";
-                            }
+                        switch($RolUsu){
+                            case 1:
+                                header("location:InicioAdmin.php?IdUsu='$IdUsu'");
+                            break;
+                            case 2:
+                                header("location:InicioCliente.php?IdUsu='$IdUsu'");
+                            break;
+                            case 3:
+                                header("location:InicioAdmin.php?IdUsu='$IdUsu'");
+                            break;
+                            default:
+                                    echo "Rol invalido  
+                                    <br> roles validos:<br>
+                                     1Admin 2Cliente 3Empleado";
+                            break;
+                        }
                     }
                     
                 }

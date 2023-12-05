@@ -40,7 +40,7 @@
                     <li class="nav-item">    
                     <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
 
-                            echo "<a class='nav-link'>Señor(a):".$row['NicknameUsu']."!!</a>";
+                            echo "<a class='nav-link'>Admin:".$row['NicknameUsu']."</a>";
                             }  ?>
                     </li>
                 </ul>

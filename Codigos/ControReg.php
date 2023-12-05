@@ -14,6 +14,7 @@
             $sql=$conect->query("select * from usuario where CorreoUsu='$Email' and ContraseñaUsu ='$Contraseña' and RolUsu='$Rol'");
             if(!$datos =$sql->fetch_object()){
                 $ejecucion = mysqli_query($conect,$insertarDatos);
+                header('location:login.php');
             }else{
                 echo "<center><h5>tus datos ya han sido registrados</h5> <br> <h5>Rectificalos</h5></center>";
             }

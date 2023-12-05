@@ -97,7 +97,7 @@
                     </div>
                     <button type="submit" class="btm"name="Registro" >Registrarse</button>
                 </form>
-                <p>Ya tienes una cuenta? <a href="/Codigos/login.html"> Inicia sesion</a></p>
+                <p>Ya tienes una cuenta? <a href="/Codigos/login.php"> Inicia sesion</a></p>
             </div>
         </div>
     </section>
