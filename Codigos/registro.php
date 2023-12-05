@@ -89,9 +89,15 @@
                         </div>
                         <input type="password" placeholder="Contraseña" name="contraseña" class="input-control" required>    
                     </div>
+                    <div>
+                        <?php
+                        include("Conexion.php");
+                        include("ControReg.php");
+                        ?>
+                    </div>
                     <button type="submit" class="btm"name="Registro" >Registrarse</button>
                 </form>
-                <p>Ya tienes una cuenta? <a href="/Codigos/login.html"> Inicia sesion</a></p>
+                <p>Ya tienes una cuenta? <a href="/Codigos/login.php"> Inicia sesion</a></p>
             </div>
         </div>
     </section>
@@ -100,22 +106,3 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-<?php
-    include ('Conexion.php');
-        $Rol =$_POST["rol"];
-        $Nombre =$_POST["nombre"];
-        $Apellido =$_POST["apellido"];
-        $Edad =$_POST["edad"];
-        $Apodo =$_POST["nickname"];
-        $Email =$_POST["email"];
-        $Telefono = $_POST["telefono"];
-        $Contraseña =$_POST["contraseña"];
-    if(isset($_POST["Registro"])){
-        if(($Edad<=100)&&($Edad>=18)){
-         /*aqui hacemos el procedimiento para meter nuestros datos*/
-        $insertarDatos = ("insert into usuario (RolUsu,NombreUsu,ApellidoUsu,EdadUsu,NicknameUsu,CorreoUsu,TelefonoUsu,ContraseñaUsu) values('$Rol','$Nombre','$Apellido','$Edad','$Apodo','$Email','$Telefono','$Contraseña')");
-        $ejecucion = mysqli_query($conect,$insertarDatos);
-        }
-        else{ echo "<h5>EDAD INVALIDA (EDAD VALIDA 18 - 99)</h5>"; }
-    }
-?>
