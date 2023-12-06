@@ -15,8 +15,7 @@
                         $Contraseña=$_POST["Contraseña"];
                         $RolUsu=$_POST["RolUsu"];
                         /*sacamos el id segun el correo contraseña y rol del usuario*/
-                        $rutaid ="Select IdUsu from usuario where CorreoUsu='$Email' and ContraseñaUsu ='$Contraseña'";
-                        $Resultid = $conect ->query($rutaid);
+                        $Resultid = $conect ->query("Select IdUsu from usuario where CorreoUsu='$Email' and ContraseñaUsu ='$Contraseña'");
                         $fila = $Resultid->fetch_assoc();
                         $IdUsu = $fila['IdUsu'];
                         /*Sacamos la ruta de validacion para el login*/
