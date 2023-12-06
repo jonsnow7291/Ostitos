@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <!--incluimos nuestra conexion a  base de datos--> 
+    <?php include("Conexion.php");?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostitos Inicio</title>
@@ -26,12 +27,15 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.html" class="nav-link">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
+                        <li class="nav-item">    
+                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
+                    </li>
                         <li class="nav-item">    
                         <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
@@ -51,41 +55,33 @@
 
         </div>
         <div class="carousel-inner">
+            <!--Iniciamos bucle para lograr que por cada Producto en la tabla halla un slide-->
+            <?php for($i = 1; $i <= 3; $i++){
+                $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $i";
+                $resultadoProductos = $conect->query($rutaProductos);
+                $filaProducto = $resultadoProductos->fetch_assoc();
+            ?>
+            <div class="carousel-item active">
+                <?php
+                $imgProducto=$filaProducto ['Imagen'];
+                echo '<img src="data:image/jpeg;base64,'.base64_encode($imgProducto).'" alt="Imagen del Producto" class="d-bock w-100">';
+                ?>
+                <div class="carousel-caption">
+                    <h5><?php 
+                    $nombreProducto = $filaProducto['Nombre'];
+                
 
-            <div class="carousel-item active">
-                <img src="/Adicionales/Productos/T32/Imagen principal.webp"class="d-bock w-100" alt="">
-                <div class="carousel-caption">
-                    <h5>T32 Onikuma</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos perspiciatis amet
-                        laudantium, quod sequi eligendi earum, repellat et adipisci velit incidunt autem nihil!
-                        Explicabo voluptatibus qui quam et cupiditate.</p>
+                    echo "$nombreProducto";?></h5>
+                    <p><?php 
+                        $ResProducto = $filaProducto['Resumen'];
+
+                        echo "$ResProducto";?> </p>
                     <a href="#" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
-            <div class="carousel-item active">
-                <img src="/Adicionales/Productos/Xt95/Imagen principal.jpg" class="d-bock w-100" alt="">
-                <div class="carousel-caption">
-                    <h5> XT95 PRO LENOVO </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos perspiciatis amet
-                        laudantium, quod sequi eligendi earum, repellat et adipisci velit incidunt autem nihil!
-                        Explicabo voluptatibus qui quam et cupiditate.
-                    </p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <img src="/Adicionales/Productos/GM2/Imagen principal.webp" class="d-bock w-100" alt="">
-                <div class="carousel-caption">
-                    <h5> GM2 PRO LENOVO</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos perspiciatis amet
-                        laudantium, quod sequi eligendi earum, repellat et adipisci velit incidunt autem nihil!
-                        Explicabo voluptatibus qui quam et cupiditate.
-                    </p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
-                </div>
-            </div>
+            <?php }?>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
