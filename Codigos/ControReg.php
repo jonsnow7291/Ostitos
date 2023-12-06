@@ -12,7 +12,7 @@
             /*aqui hacemos el procedimiento para meter nuestros datos*/
             $insertarDatos = ("insert into usuario (RolUsu,NombreUsu,ApellidoUsu,EdadUsu,NicknameUsu,CorreoUsu,TelefonoUsu,ContraseñaUsu) values('$Rol','$Nombre','$Apellido','$Edad','$Apodo','$Email','$Telefono','$Contraseña')");
             $sql=$conect->query("select * from usuario where CorreoUsu='$Email' and ContraseñaUsu ='$Contraseña' and RolUsu='$Rol'");
-            if(!$datos =$sql->fetch_object()){
+            if(!$datos = $sql->fetch_object()){
                 $ejecucion = mysqli_query($conect,$insertarDatos);
                 header('location:login.php');
             }else{

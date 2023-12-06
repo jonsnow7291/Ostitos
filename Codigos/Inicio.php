@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <!--incluimos nuestra conexion a  base de datos--> 
     <?php include("Conexion.php");?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.html" class="nav-link">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
@@ -55,14 +55,17 @@
 
         </div>
         <div class="carousel-inner">
-            <!--Iniciamos bucle para lograr que por cada registro halla un slide-->
+            <!--Iniciamos bucle para lograr que por cada Producto en la tabla halla un slide-->
             <?php for($i = 1; $i <= 3; $i++){
                 $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $i";
                 $resultadoProductos = $conect->query($rutaProductos);
                 $filaProducto = $resultadoProductos->fetch_assoc();
             ?>
             <div class="carousel-item active">
-                <img src="/Adicionales/Productos/T32/Imagen principal.webp"class="d-bock w-100" alt="">
+                <?php
+                $imgProducto=$filaProducto ['Imagen'];
+                echo '<img src="data:image/jpeg;base64,'.base64_encode($imgProducto).'" alt="Imagen del Producto" class="d-bock w-100">';
+                ?>
                 <div class="carousel-caption">
                     <h5><?php 
                     $nombreProducto = $filaProducto['Nombre'];
