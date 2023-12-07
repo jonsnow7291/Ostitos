@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <!--incluimos nuestra conexion a  base de datos--> 
-    <?php include("Conexion.php");?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostitos Inicio</title>
@@ -11,10 +10,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Codigos/css/Inicio.css">
 </head>
-
+<!--Codigo Para el mas vendido-->
+<?php 
+    include("Conexion.php");
+    $ResultadoMV=$conect->query("select * from vista_prodesta where IdProDesta = 3");
+    $fila = $ResultadoMV->fetch_assoc();
+    $NombreMV=$fila['Nombre'];
+    $CaracMV=$fila['Caracteristicas'];
+    $ImgMV=$fila['Imagen2'];
+?>
 <body>
 
-
+    <!--aqui empieza el menu de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
 
         <div class="container">
@@ -43,6 +50,9 @@
             </div>
         </div>
     </nav>
+    <!--aqui termina el menu de navegacion-->
+
+    <!--aqui empieza el carousel-->
 
     <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -54,33 +64,38 @@
                 aria-label="Slide 3"></button>
 
         </div>
-        <div class="carousel-inner">
-            <!--Iniciamos bucle para lograr que por cada Producto en la tabla halla un slide-->
-            <?php for($i = 1; $i <= 3; $i++){
-                $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $i";
-                $resultadoProductos = $conect->query($rutaProductos);
-                $filaProducto = $resultadoProductos->fetch_assoc();
-            ?>
-            <div class="carousel-item active">
+        <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <?php for ($Pro = 1; $Pro <= 3; $Pro++) {
+            $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $Pro";
+            $resultadoProductos = $conect->query($rutaProductos);
+            $filaProducto = $resultadoProductos->fetch_assoc();
+        ?>
+            <div class="carousel-item <?php echo ($Pro == 1) ? 'active' : ''; ?>">
                 <?php
-                $imgProducto=$filaProducto ['Imagen'];
-                echo '<img src="data:image/jpeg;base64,'.base64_encode($imgProducto).'" alt="Imagen del Producto" class="d-bock w-100">';
+                $imgProducto = $filaProducto['Imagen'];
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($imgProducto) . '" alt="Imagen del Producto" class="d-bock w-100">';
                 ?>
                 <div class="carousel-caption">
-                    <h5><?php 
-                    $nombreProducto = $filaProducto['Nombre'];
-                
-
-                    echo "$nombreProducto";?></h5>
-                    <p><?php 
+                    <h5><?php
+                        $nombreProducto = $filaProducto['Nombre'];
+                        echo "$nombreProducto";
+                        ?></h5>
+                    <p><?php
                         $ResProducto = $filaProducto['Resumen'];
-
-                        echo "$ResProducto";?> </p>
+                        echo "$ResProducto";
+                        ?> </p>
                     <a href="#" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
-            <?php }?>
-        </div>
+        <?php } ?>
+    </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -91,22 +106,22 @@
             <span class="visually-hidden">next</span>
         </button>
     </div>
+
+    <!--Termina el carrusel-->
+    <!-- aqui empieza el mas vendido-->
     <section class="about section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="about-img">
-                        <img src="/Adicionales/Imagen principal/XT95 imagen con mujer.webp" class="img-fluid" alt="">
+                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($ImgMV).'" alt="Imagen del Producto" class="d-bock w-100">';?>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text text-white">
-                        <h2> Xt95 pro lenovo <br> lo ultimo en inovacion </h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eos iste in repellendus
-                            veritatis molestias accusantium aliquam, labore, ratione iusto ipsum vero! Culpa magni
-                            inventore animi obcaecati omnis provident eum?
-                        </p>
+                        <center><h2> El mas vendido!! </h2></center>
+                        <?php echo "<h2>".$NombreMV."</h2>";?>
+                        <?php echo "<p>".$CaracMV."</p>";?>
                         <a href="#" class="btn btn-primary">Mas informacion</a>
                         <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                     </div>
@@ -114,7 +129,6 @@
             </div>
         </div>
     </section>
-            <!--Termina el carrusel-->
     <section class="services section-padding">
         <div class="container">
             <div class="row">
