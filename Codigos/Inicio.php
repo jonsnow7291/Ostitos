@@ -62,36 +62,35 @@
                 aria-label="Slide 2"></button>
             <button type="button" data-bs-target="carouselE" data-bs-slide-to="2" aria-current="true"
                 aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="carouselE" data-bs-slide-to="3" aria-current="true"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="carouselE" data-bs-slide-to="4" aria-current="true"
+                aria-label="Slide 5"></button>
 
         </div>
         <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
     <div class="carousel-inner">
         <?php for ($Pro = 1; $Pro <= 3; $Pro++) {
-            $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $Pro";
-            $resultadoProductos = $conect->query($rutaProductos);
-            $filaProducto = $resultadoProductos->fetch_assoc();
+            $rutaCarousel = "SELECT * FROM vista_prodesta WHERE IdProDesta = $Pro";
+            $resultadoCarousel = $conect->query($rutaCarousel);
+            $filaCarousel = $resultadoCarousel->fetch_assoc();
         ?>
             <div class="carousel-item <?php echo ($Pro == 1) ? 'active' : ''; ?>">
                 <?php
-                $imgProducto = $filaProducto['Imagen'];
-                echo '<img src="data:image/jpeg;base64,' . base64_encode($imgProducto) . '" alt="Imagen del Producto" class="d-bock w-100">';
+                $imgCarousel = $filaCarousel['Imagen'];
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($imgCarousel) . '" alt="Imagen del Producto" class="d-bock w-100">';
                 ?>
                 <div class="carousel-caption">
                     <h5><?php
-                        $nombreProducto = $filaProducto['Nombre'];
-                        echo "$nombreProducto";
+                        $nombreCarousel = $filaCarousel['Nombre'];
+                        echo "$nombreCarousel";
                         ?></h5>
                     <p><?php
-                        $ResProducto = $filaProducto['Resumen'];
-                        echo "$ResProducto";
+                        $ResCarousel = $filaCarousel['Resumen'];
+                        echo "$ResCarousel";
                         ?> </p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                        <?php $LinkProducto = $filaCarousel['Enlace'];?>
+                    <a href="<?php echo "$LinkProducto"; ?>" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
         <?php } ?>
@@ -181,7 +180,7 @@
             </div>
         </div>
     </section>
-
+<!--aqui empiezan los productos destacados-->
     <section class="portafolio-section-padding">
         <div class="container">
             <div class="row">
@@ -198,14 +197,22 @@
                     <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/G11/Imagen principal.webp" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <?php
+                                    $ResultadoDestaUno=$conect->query("select * from vista_prodesta where IdProDesta = 4");
+                                    $filaDestaUno = $ResultadoDestaUno->fetch_assoc();
+                                    $NombreDestaUno=$filaDestaUno['Nombre'];
+                                    $CaracDestaUno=$filaDestaUno['Caracteristicas'];
+                                    $ImgDestaUno=$filaDestaUno['Imagen3'];
+                                    $LinkDestaUno=$filaDestaUno['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                            <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaUno).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>G11 GAMER</h3>
-                            <p class="lead">
-                                Estos audífonos Gamer los puedes controlar mediante la tecnología touch control también cuentan con Bluetooth 5.0, cancelación de ruido y un emparejamiento automático. Su autonomía es de 5 a 6 horas, son resistentes al agua y además son compatibles con Android y iOs.
-                            </p>
+                            <h3><?php echo"$NombreDestaUno";?></h3>
+                            <p class="lead"><?php echo "$CaracDestaUno"; ?></p>
                             <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <a href="<?php echo "$LinkDestaUno";?>" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                         </div>
                     </div>
                 </div>
@@ -213,41 +220,52 @@
                     <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/X15/Imagen principal.jpg" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <?php
+                                    $ResultadoDestaDos=$conect->query("select * from vista_prodesta where IdProDesta = 5");
+                                    $filaDestaDos = $ResultadoDestaDos->fetch_assoc();
+                                    $NombreDestaDos=$filaDestaDos['Nombre'];
+                                    $CaracDestaDos=$filaDestaDos['Caracteristicas'];
+                                    $ImgDestaDos=$filaDestaDos['Imagen3'];
+                                    $LinkDestaDos=$filaDestaDos['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>X15 GAMER</h3>
-                            <p class="lead">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa laborum dolore
-                                nemo in quaerat, natus sunt, obcaecati quibusdam tempore praesentium excepturi cumque
-                                ratione fuga dicta, ipsa enim delectus. Tempore!
-                            </p>
+                            <h3><?php echo"$NombreDestaDos";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaDos";?></p>
                             <button class="btn bg-primary text-white">Mas informacion</button>
                             <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/G7S/Imagen principal g7s.jpg" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <?php
+                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 5");
+                                    $filaDestaTre = $ResultadoDestaTre->fetch_assoc();
+                                    $NombreDestaTre=$filaDestaTre['Nombre'];
+                                    $CaracDestaTre=$filaDestaTre['Caracteristicas'];
+                                    $ImgDestaTre=$filaDestaTre['Imagen3'];
+                                    $LinkDestaTre=$filaDestaTre['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>G7S GAMER</h3>
-                            <p class="lead">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa laborum dolore
-                                nemo in quaerat, natus sunt, obcaecati quibusdam tempore praesentium excepturi cumque
-                                ratione fuga dicta, ipsa enim delectus. Tempore!
-                            </p>
+                            <h3><?php echo"$NombreDestaDos";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaDos";?></p>
                             <button class="btn bg-primary text-white">Mas informacion</button>
                             <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+<!--aqui terminan los productos destacados-->
     <section class="team section-padding">
         <div class="container">
             <div class="row">
