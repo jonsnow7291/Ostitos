@@ -89,8 +89,7 @@
                         $ResCarousel = $filaCarousel['Resumen'];
                         echo "$ResCarousel";
                         ?> </p>
-                        <?php $LinkProducto = $filaCarousel['Enlace'];?>
-                    <a href="<?php echo "$LinkProducto"; ?>" class="btn btn-primary mt">Mas informacion</a>
+                    <a href="/Codigos/login.php" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
         <?php } ?>
@@ -121,8 +120,7 @@
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
-                        <a href="#" class="btn btn-primary">Mas informacion</a>
-                        <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                        <a href="/Codigos/login.php" class="btn btn-primary">Mas informacion</a>
                     </div>
                 </div>
             </div>
@@ -149,7 +147,7 @@
                             <p class="lead">
                                 Ey tú, que esperas para registrarte, es completamente gratis y además puedes disfrutar de las ofertas y beneficios exclusivos de nuestra comunidad.
                             </p>
-                            <button class="btn bg-primary text-white" >Mas informacion</button>
+                            <a href="/Codigos/registro.php"><button class="btn bg-primary text-white" >Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +159,7 @@
                             <p class="lead">
                                 Inicia sesión para conocer todo lo que tenemos disponible para ti, además puedes llevar el control de tus productos de una manera más fácil y sencilla.
                             </p>
-                            <button class="btn bg-primary text-white"  href="/Codigos/login.html">Mas informacion </button>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion </button></a>
                         </div>
                     </div>
                 </div>
@@ -171,9 +169,9 @@
                             <i class="bi bi-cart-check-fill"></i>
                             <h3 class="card-title">Carrito</h3>
                             <p class="lead">
-                                Desde aquí puedes registrar tus productos, realizar el pago de estos mismos además de ver el estado de tu pedido y gestionar tus compras.
+                                Desde aquí puedes registrar tus productos, realizar el pago de estos mismos además de ver el estado de tu pedido y gestionar tus compras.<br>¡¡Potencia tu juego!!
                             </p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white" >Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +186,8 @@
                     <div class="section-header text-center text-white pb-5">
                         <h2>Productos destacados</h2>
                         <p>
-                            ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!</p>
+                            ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -211,8 +210,7 @@
                             </div>
                             <h3><?php echo"$NombreDestaUno";?></h3>
                             <p class="lead"><?php echo "$CaracDestaUno"; ?></p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="<?php echo "$LinkDestaUno";?>" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +218,7 @@
                     <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <!--aqui empeza el codigo del segundo producto destacado-->
                                 <?php
                                     $ResultadoDestaDos=$conect->query("select * from vista_prodesta where IdProDesta = 5");
                                     $filaDestaDos = $ResultadoDestaDos->fetch_assoc();
@@ -229,13 +227,12 @@
                                     $ImgDestaDos=$filaDestaDos['Imagen3'];
                                     $LinkDestaDos=$filaDestaDos['Enlace'];
                                 ?>
-                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <!--aqui empeza el codigo del segundo producto destacado-->
                                 <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
                             <h3><?php echo"$NombreDestaDos";?></h3>
                             <p class="lead"><?php echo"$CaracDestaDos";?></p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -243,22 +240,21 @@
                 <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <!--aqui empeza el codigo del Tercer producto destacado-->
                                 <?php
-                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 5");
+                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 6");
                                     $filaDestaTre = $ResultadoDestaTre->fetch_assoc();
                                     $NombreDestaTre=$filaDestaTre['Nombre'];
                                     $CaracDestaTre=$filaDestaTre['Caracteristicas'];
                                     $ImgDestaTre=$filaDestaTre['Imagen3'];
                                     $LinkDestaTre=$filaDestaTre['Enlace'];
                                 ?>
-                                <!--aqui empeza el codigo del primer producto destacado-->
-                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
+                                <!--aqui empeza el codigo del Tercer producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaTre).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3><?php echo"$NombreDestaDos";?></h3>
-                            <p class="lead"><?php echo"$CaracDestaDos";?></p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <h3><?php echo"$NombreDestaTre";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaTre";?></p>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -286,7 +282,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores. 
+                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores.<br>¡¡Te Esperamos!! 
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>
@@ -322,7 +318,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias para nuestra comunidad. 
+                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias. 
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>
