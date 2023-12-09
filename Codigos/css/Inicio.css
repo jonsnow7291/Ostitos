@@ -21,7 +21,7 @@
 }
 
 body{
-    background-color:#273041;
+    background-color: #273041;
     color: var(--text-linght-gray);
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -109,7 +109,7 @@ letter-spacing: 2px;
     }
     .carousel-caption a {
         padding: 10px 15px;
-        font-size: 10px;
+        font-size: 15px;
     }
     .carousel-caption p {
         width: 50%;
