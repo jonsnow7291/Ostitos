@@ -25,13 +25,19 @@
                         /* envio de Usuarios A inicio Segun respectivo rol */
                             switch($RolUsu){
                                 case 1:
-                                    header("location:InicioAdmin.php?IdUsu='$IdUsu'");
+                                    session_start();
+                                    $_SESSION['IdUsu'] = $IdUsu;
+                                    header("location:InicioAdmin.php");
                                 break;
                                 case 2:
-                                    header("location:InicioCliente.php?IdUsu='$IdUsu'");
+                                    session_start();
+                                    $_SESSION['IdUsu'] = $IdUsu;
+                                    header("location:InicioCliente.php");
                                 break;
                                 case 3:
-                                    header("location:InicioAdmin.php?IdUsu='$IdUsu'");
+                                    session_start();
+                                    $_SESSION['IdUsu'] = $IdUsu;
+                                    header("location:InicioTrabajador.php");
                                 break;
                                 default:
                                         echo "Rol invalido  
@@ -42,7 +48,6 @@
                         }else{
                             echo "<center><h5>datos invalidos<h5>
                             <h5>rectificalos<h5><center>";
-
                         }
                     }
                     

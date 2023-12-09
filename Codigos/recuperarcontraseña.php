@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="shortcut icon" href="/Pagina Web/Imagenes/Imagen principal/logos/logo.png" type="image/x-icon">
+    <title>Olvidaste tu contraseña</title>
+    <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Codigos/css/login.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
         <div class="container">
 
@@ -25,9 +26,7 @@
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
-                        </li>
+ 
                         <li class="nav-item">    
                         <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
@@ -35,35 +34,36 @@
             </div>
         </div>
     </nav>
-    
     <section class="form-main">
         <div class="form-content">
             <div class="box">
-                <h3>Bienvenido</h3>
-                <form action="">
+                <h3>He olvidado mi Contraseña</h3>
+                <form action="recuperarcontraseña.php" method="post">
+
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-circle"></i>
+                        <i class="bi bi-question-square-fill"></i>
                         </div>
-                        <input type="text" placeholder="Email" class="input-control">
+                        <input type="text" placeholder="Recuerdas tu apodo???" class="input-control" name="NickOlvido"  >
                     </div>
                     <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                        <input type="password" placeholder="Password" class="input-control">
                         <div class="input-link">
-                            <a href="#" class="gradient-text">Has Olvidado tu contraseña</a>
+                            <p> recordaste tu clave?<a href="/Codigos/login.php" class="gradient-text">Inicia sesión</a></p>
                         </div>
                     </div>
-                    <button type="submit" class="btm">Iniciar Sesion</button>
+                    <button type="submit" class="btm" name="BtnOlvido">Iniciar Sesion</button>
                 </form>
-                <p>No tienes una cuenta? <a href="/Codigos/registro.html"> Crear cuenta</a></p>
+                <p>No tienes una cuenta? <a href="/Codigos/registro.php"> Crear cuenta</a></p>
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+    <?php
+    $Nickname=$_POST['NickOlvido'];
+    include ("Conexion.php");
+    include ("ControladorOlvidoC.php");
+     ?>
 </html>

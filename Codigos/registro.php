@@ -29,7 +29,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@
                         <div class="icons">
                             <i class="bi bi-telephone-plus"></i>
                         </div>
-                        <input type="text" placeholder="Numero telefonico" name="telefono" class="input-control" required>
+                        <input type="number" max="10" min="10" placeholder="Numero telefonico" name="telefono" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">

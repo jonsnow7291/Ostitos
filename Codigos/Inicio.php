@@ -42,10 +42,7 @@
                         </li>
                         <li class="nav-item">    
                         <a href="/Codigos/registro.php" class="nav-link">Registro</a>
-                    </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
-                    </li>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -62,36 +59,34 @@
                 aria-label="Slide 2"></button>
             <button type="button" data-bs-target="carouselE" data-bs-slide-to="2" aria-current="true"
                 aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="carouselE" data-bs-slide-to="3" aria-current="true"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="carouselE" data-bs-slide-to="4" aria-current="true"
+                aria-label="Slide 5"></button>
 
         </div>
         <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
     <div class="carousel-inner">
         <?php for ($Pro = 1; $Pro <= 3; $Pro++) {
-            $rutaProductos = "SELECT * FROM vista_prodesta WHERE IdProDesta = $Pro";
-            $resultadoProductos = $conect->query($rutaProductos);
-            $filaProducto = $resultadoProductos->fetch_assoc();
+            $rutaCarousel = "SELECT * FROM vista_prodesta WHERE IdProDesta = $Pro";
+            $resultadoCarousel = $conect->query($rutaCarousel);
+            $filaCarousel = $resultadoCarousel->fetch_assoc();
         ?>
             <div class="carousel-item <?php echo ($Pro == 1) ? 'active' : ''; ?>">
                 <?php
-                $imgProducto = $filaProducto['Imagen'];
-                echo '<img src="data:image/jpeg;base64,' . base64_encode($imgProducto) . '" alt="Imagen del Producto" class="d-bock w-100">';
+                $imgCarousel = $filaCarousel['Imagen'];
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($imgCarousel) . '" alt="Imagen del Producto" class="d-bock w-100">';
                 ?>
                 <div class="carousel-caption">
                     <h5><?php
-                        $nombreProducto = $filaProducto['Nombre'];
-                        echo "$nombreProducto";
+                        $nombreCarousel = $filaCarousel['Nombre'];
+                        echo "$nombreCarousel";
                         ?></h5>
                     <p><?php
-                        $ResProducto = $filaProducto['Resumen'];
-                        echo "$ResProducto";
+                        $ResCarousel = $filaCarousel['Resumen'];
+                        echo "$ResCarousel";
                         ?> </p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                    <a href="/Codigos/login.php" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
         <?php } ?>
@@ -122,8 +117,7 @@
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
-                        <a href="#" class="btn btn-primary">Mas informacion</a>
-                        <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                        <a href="/Codigos/login.php" class="btn btn-primary">Mas informacion</a>
                     </div>
                 </div>
             </div>
@@ -150,7 +144,7 @@
                             <p class="lead">
                                 Ey tú, que esperas para registrarte, es completamente gratis y además puedes disfrutar de las ofertas y beneficios exclusivos de nuestra comunidad.
                             </p>
-                            <button class="btn bg-primary text-white" >Mas informacion</button>
+                            <a href="/Codigos/registro.php"><button class="btn bg-primary text-white" >Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +156,7 @@
                             <p class="lead">
                                 Inicia sesión para conocer todo lo que tenemos disponible para ti, además puedes llevar el control de tus productos de una manera más fácil y sencilla.
                             </p>
-                            <button class="btn bg-primary text-white"  href="/Codigos/login.html">Mas informacion </button>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion </button></a>
                         </div>
                     </div>
                 </div>
@@ -172,16 +166,16 @@
                             <i class="bi bi-cart-check-fill"></i>
                             <h3 class="card-title">Carrito</h3>
                             <p class="lead">
-                                Desde aquí puedes registrar tus productos, realizar el pago de estos mismos además de ver el estado de tu pedido y gestionar tus compras.
+                                Desde aquí puedes registrar tus productos, realizar el pago de estos mismos además de ver el estado de tu pedido y gestionar tus compras.<br>¡¡Potencia tu juego!!
                             </p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white" >Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+<!--aqui empiezan los productos destacados-->
     <section class="portafolio-section-padding">
         <div class="container">
             <div class="row">
@@ -189,7 +183,8 @@
                     <div class="section-header text-center text-white pb-5">
                         <h2>Productos destacados</h2>
                         <p>
-                            ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!</p>
+                            ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -198,14 +193,21 @@
                     <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/G11/Imagen principal.webp" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <?php
+                                    $ResultadoDestaUno=$conect->query("select * from vista_prodesta where IdProDesta = 4");
+                                    $filaDestaUno = $ResultadoDestaUno->fetch_assoc();
+                                    $NombreDestaUno=$filaDestaUno['Nombre'];
+                                    $CaracDestaUno=$filaDestaUno['Caracteristicas'];
+                                    $ImgDestaUno=$filaDestaUno['Imagen3'];
+                                    $LinkDestaUno=$filaDestaUno['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del primer producto destacado-->
+                            <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaUno).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>G11 GAMER</h3>
-                            <p class="lead">
-                                Estos audífonos Gamer los puedes controlar mediante la tecnología touch control también cuentan con Bluetooth 5.0, cancelación de ruido y un emparejamiento automático. Su autonomía es de 5 a 6 horas, son resistentes al agua y además son compatibles con Android y iOs.
-                            </p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <h3><?php echo"$NombreDestaUno";?></h3>
+                            <p class="lead"><?php echo "$CaracDestaUno"; ?></p>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -213,41 +215,50 @@
                     <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/X15/Imagen principal.jpg" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del segundo producto destacado-->
+                                <?php
+                                    $ResultadoDestaDos=$conect->query("select * from vista_prodesta where IdProDesta = 5");
+                                    $filaDestaDos = $ResultadoDestaDos->fetch_assoc();
+                                    $NombreDestaDos=$filaDestaDos['Nombre'];
+                                    $CaracDestaDos=$filaDestaDos['Caracteristicas'];
+                                    $ImgDestaDos=$filaDestaDos['Imagen3'];
+                                    $LinkDestaDos=$filaDestaDos['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del segundo producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>X15 GAMER</h3>
-                            <p class="lead">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa laborum dolore
-                                nemo in quaerat, natus sunt, obcaecati quibusdam tempore praesentium excepturi cumque
-                                ratione fuga dicta, ipsa enim delectus. Tempore!
-                            </p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <h3><?php echo"$NombreDestaDos";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaDos";?></p>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
+                <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <img src="/Adicionales/Productos/G7S/Imagen principal g7s.jpg" class="img-fluid" alt="">
+                                <!--aqui empeza el codigo del Tercer producto destacado-->
+                                <?php
+                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 6");
+                                    $filaDestaTre = $ResultadoDestaTre->fetch_assoc();
+                                    $NombreDestaTre=$filaDestaTre['Nombre'];
+                                    $CaracDestaTre=$filaDestaTre['Caracteristicas'];
+                                    $ImgDestaTre=$filaDestaTre['Imagen3'];
+                                    $LinkDestaTre=$filaDestaTre['Enlace'];
+                                ?>
+                                <!--aqui empeza el codigo del Tercer producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaTre).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3>G7S GAMER</h3>
-                            <p class="lead">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa laborum dolore
-                                nemo in quaerat, natus sunt, obcaecati quibusdam tempore praesentium excepturi cumque
-                                ratione fuga dicta, ipsa enim delectus. Tempore!
-                            </p>
-                            <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
-                            
+                            <h3><?php echo"$NombreDestaTre";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaTre";?></p>
+                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+<!--aqui terminan los productos destacados-->
     <section class="team section-padding">
         <div class="container">
             <div class="row">
@@ -268,7 +279,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores. 
+                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores.<br>¡¡Te Esperamos!! 
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>
@@ -304,7 +315,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias para nuestra comunidad. 
+                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias. 
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>
@@ -319,7 +330,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card text-center bg-dark">
                         <div class="card-body text-white">
-                            <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
+                            <img src="/Adicionales/Fundadores/Imagen de WhatsApp 2023-12-07 a las 14.59.32_d7208d91.jpg" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Tik tok puedes ver trends, de contenido interesante tips y consejos que te damos para el cuidado de nuestros productos
