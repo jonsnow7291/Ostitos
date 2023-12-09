@@ -12,7 +12,7 @@
                 <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         include ("../Conexion.php");
-                        $RutaP = "select * from fichas_productos where Id = 7 ";
+                        $RutaP = "select * from fichas_productos where Id = 9 ";
                         $resultadoP = $conect->query($RutaP);
                         $fila = $resultadoP->fetch_assoc();
                         $Nombre = $fila["Nombre"];

@@ -40,15 +40,57 @@
                     <li class="nav-item">    
                     <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
 
-                            echo "<a class='nav-link'>Admin:".$row['NicknameUsu']."</a>";
+                            echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Admin:".$row['NicknameUsu']."</a>";
                             }  ?>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div>
+    <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Pagina Web/Imagenes/Productos/T32/Imagen principal.webp" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> T32 okunami</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Pagina Web/Imagenes/Productos/Xt95/Imagen principal.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> XT95 PRO LENOVO </h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Pagina Web/Imagenes/Productos/GM2/Imagen principal.webp" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5> GM2 PRO LENOVO</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
