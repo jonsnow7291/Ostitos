@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Agregar producto</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -29,7 +29,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -39,65 +39,66 @@
     <section class="form-main">
         <div class="form-content">
             <div class="box">
-                <h3>Bienvenido</h3>
+                <h3>Agregar producto</h3>
                 <form action="registro.php" method="post">
-                <div class="input-box">
+                    <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-fill"></i>
+                            <i class="bi bi-speaker-fill"></i>
                         </div>
-                        <input type="number" min="1" max="3" placeholder="Rol Usuario" name="rol" class="input-control" required>
+                        <input type="text" placeholder="Nombre del producto" name="producto" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-circle"></i>
+                            <i class="bi bi-upc"></i>
                         </div>
-                        <input type="text" placeholder="Primer Nombre" name="nombre" class="input-control" required>
+                        <input type="password" placeholder="serial" name="serial" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-fill"></i>
+                            <i class="bi bi-bookmark-check"></i>
                         </div>
-                        <input type="text" placeholder="Primer apellido" name="apellido" class="input-control" required>
+                        <input type="password" placeholder="Marca" name="Marca" class="input-control" required>    
+                    </div>
+                    
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-tags-fill"></i>
+                        </div>
+                        <input type="password" placeholder="Categoria" name="Categoria" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-shield-lock-fill"></i>
+                            <i class="bi bi-cash-coin"></i>
                         </div>
-                        <input type="number" placeholder="Edad" name="edad" class="input-control" required>    
+                        <input type="password" placeholder="Precio" name="Precio" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-video2"></i>
+                            <i class="bi bi-chat-left-text"></i>
                         </div>
-                        <input type="text" placeholder="Nombre de usuario" name="nickname" class="input-control" required>
+                        <input type="password" placeholder="Descripcion" name="Descripcion" class="input-control" required>  
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-video2"></i>
+                            <i class="bi bi-chat-left-text-fill"></i>
                         </div>
-                        <input type="Email" placeholder="Correo Usuario" name="email" class="input-control" required>
+                        <input type="password" placeholder="Resumen" name="Resumen" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-telephone-plus"></i>
+                            <i class="bi bi-card-image"></i>
                         </div>
-                        <input type="tel" pattern="[0-9]{10}" minlength="10" maxlength="10" placeholder="Numero telefonico" name="telefono" class="input-control" required>
+                        <input type="password" placeholder="Agregar imagenes" name="Agregar imagenes" class="input-control" required>   
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
+                        <input type="file"  name="archivosubido">
                     </div>
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                        <input type="password" placeholder="Contraseña" name="contraseña" class="input-control" required>    
-                    </div>
-                    <div>
-                        <?php
-                        include("Conexion.php");
-                        include("ControReg.php");
-                        ?>
-                    </div>
-                    <button type="submit" class="btm"name="Registro" >Registrarse</button>
+                    <button type="submit" class="btm" name="Agregar producto" >Agregar producto</button>
                 </form>
-                <p>Ya tienes una cuenta? <a href="/Codigos/login.php"> Inicia sesion</a></p>
             </div>
         </div>
     </section>
