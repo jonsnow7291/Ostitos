@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--incluimos nuestra conexion a  base de datos--> 
+    <!--incluimos nuestra conexion a  base de datos-->
+    <?php 
+    session_start();
+    include("Conexion.php");
+    $IdLink=$_SESSION['IdUsu'];
+    $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
+    $resultadoUsuario=mysqli_query($conect,$sqlruta);
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostitos Inicio</title>
@@ -34,17 +41,16 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="#" class="nav-link">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
-                        </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
+                    <li class="nav-item">    
+                            <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
+
+                            echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Cliente:".$row['NicknameUsu']."</a>";
+                            }  ?>
                     </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                    <li class="nav-item">    
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
                     </li>
                 </ul>
             </div>
@@ -235,7 +241,7 @@
                             <h3><?php echo"$NombreDestaDos";?></h3>
                             <p class="lead"><?php echo"$CaracDestaDos";?></p>
                             <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <a href="<?php echo "$LinkDestaDos";?>" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                         </div>
                     </div>
                 </div>
@@ -243,22 +249,22 @@
                 <div class="card text-light text-center bg-dark pb-2">
                         <div class="card-body text-white">
                             <div class="img-area mb-4">
-                                <!--aqui empeza el codigo del primer producto destacado-->
+                                <!--aqui empeza el codigo del tercer producto destacado-->
                                 <?php
-                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 5");
+                                    $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 6");
                                     $filaDestaTre = $ResultadoDestaTre->fetch_assoc();
                                     $NombreDestaTre=$filaDestaTre['Nombre'];
                                     $CaracDestaTre=$filaDestaTre['Caracteristicas'];
                                     $ImgDestaTre=$filaDestaTre['Imagen3'];
                                     $LinkDestaTre=$filaDestaTre['Enlace'];
                                 ?>
-                                <!--aqui empeza el codigo del primer producto destacado-->
-                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaDos).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
+                                <!--aqui empeza el codigo del tercer producto destacado-->
+                                <img <?php echo'class="img-fluid" src="data:image/jpeg;base64,'.base64_encode($ImgDestaTre).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                             </div>
-                            <h3><?php echo"$NombreDestaDos";?></h3>
-                            <p class="lead"><?php echo"$CaracDestaDos";?></p>
+                            <h3><?php echo"$NombreDestaTre";?></h3>
+                            <p class="lead"><?php echo"$CaracDestaTre";?></p>
                             <button class="btn bg-primary text-white">Mas informacion</button>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                            <a href="<?php echo "$LinkDestaTre";?>" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                         </div>
                     </div>
                 </div>

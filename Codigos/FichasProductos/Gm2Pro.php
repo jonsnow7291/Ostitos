@@ -38,14 +38,14 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.html" class="nav-link">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>

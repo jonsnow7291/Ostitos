@@ -3,9 +3,9 @@
 
 <head>
     <?php 
+    session_start();
     include("Conexion.php");
-    $id=$_GET['IdUsu'];
-    $sqlruta="select * from usuario where IdUsu =".$id;
+    $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
     $resultadoUsuario=mysqli_query($conect,$sqlruta);
     ?>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.html" class="nav-link">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
@@ -42,6 +42,9 @@
 
                             echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Admin:".$row['NicknameUsu']."</a>";
                             }  ?>
+                    </li>
+                    <li class="nav-item">    
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
                     </li>
                 </ul>
             </div>

@@ -12,7 +12,7 @@
                 <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         include ("../Conexion.php");
-                        $RutaP = "select * from fichas_productos where Id = 4 ";
+                        $RutaP = "select * from fichas_productos where Id = 7 ";
                         $resultadoP = $conect->query($RutaP);
                         $fila = $resultadoP->fetch_assoc();
                         $Nombre = $fila["Nombre"];
@@ -45,7 +45,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
