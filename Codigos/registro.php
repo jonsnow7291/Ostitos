@@ -55,7 +55,7 @@
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-fill"></i>
+                            <i class="bi bi-person-square"></i>
                         </div>
                         <input type="text" placeholder="Primer apellido" name="apellido" class="input-control" required>
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-person-video2"></i>
+                            <i class="bi bi-person-workspace"></i>
                         </div>
                         <input type="Email" placeholder="Correo Usuario" name="email" class="input-control" required>
                     </div>
