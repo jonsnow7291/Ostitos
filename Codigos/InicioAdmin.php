@@ -75,14 +75,6 @@
                     <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="/Pagina Web/Imagenes/Productos/GM2/Imagen principal.webp" class="d-block w-100" alt="">
-                <div class="carousel-caption">
-                    <h5> GM2 PRO LENOVO</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <a href="#" class="btn btn-primary mt">Administrar</a>
-                </div>
-            </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
