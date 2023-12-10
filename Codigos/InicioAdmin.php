@@ -64,7 +64,7 @@
                 <div class="carousel-caption">
                     <h5>Administra tus productos</h5>
                     <p>Inserta, mira, elimina y modifica los productos de tu stock</p>
-                    <a href="#" class="btn btn-primary mt">Administrar</a>
+                    <a href="/Codigos/CRUD/ListaProductos.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -72,7 +72,7 @@
                 <div class="carousel-caption">
                     <h5>Administra tu base de usuarios</h5>
                     <p>Inserta, mira, elimina y modifica los registros de tus usuarios</p>
-                    <a href="#" class="btn btn-primary mt">Administrar</a>
+                    <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
             <div class="carousel-item">

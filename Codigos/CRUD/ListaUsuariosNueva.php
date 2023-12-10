@@ -77,7 +77,7 @@
 						<td class="filas"><?php echo $fila['Contraseña']; ?></td>
 						<td class="filas"><?php echo $fila['FechaModi']; ?></td>
 
-						<td class="filas"><br><a  href="">Editar</a><br><br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a  href="/Codigos/CRUD/EditarUsuarios.php">Editar</a><br><br><a href="">Eliminar</a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
