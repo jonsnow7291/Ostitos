@@ -44,6 +44,9 @@
                         <a href="#" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">    
+                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                    </li>
+                    <li class="nav-item">    
                             <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
 
                             echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Cliente:".$row['NicknameUsu']."</a>";

@@ -330,7 +330,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card text-center bg-dark">
                         <div class="card-body text-white">
-                            <img src="/Adicionales/Fundadores/Imagen de WhatsApp 2023-12-07 a las 14.59.32_d7208d91.jpg" class="img-fluid roundad-circle" alt="">
+                            <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Tik tok puedes ver trends, de contenido interesante tips y consejos que te damos para el cuidado de nuestros productos

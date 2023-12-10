@@ -24,11 +24,6 @@
                     <li class="nav-item">
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
-                    <li class="nav-item">
- 
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
-                    </li>
                 </ul>
             </div>
         </div>
