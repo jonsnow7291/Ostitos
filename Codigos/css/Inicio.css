@@ -29,6 +29,9 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
 }
+.carousel-inner{
+    margin-top: 5%;
+}
 
 .section-padding {
     padding: 100px 0%;
