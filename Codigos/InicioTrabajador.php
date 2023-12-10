@@ -3,9 +3,9 @@
 
 <head>
     <?php 
+    session_start();
     include("Conexion.php");
-    $id=$_GET['IdUsu'];
-    $sqlruta="select * from usuario where IdUsu =".$id;
+    $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
     $resultadoUsuario=mysqli_query($conect,$sqlruta);
     ?>
     <meta charset="UTF-8">
@@ -42,6 +42,9 @@
 
                             echo "<a class='nav-link'>Empleado:".$row['NicknameUsu']."!!</a>";
                             }  ?>
+                    </li>
+                    <li class="nav-item">    
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
