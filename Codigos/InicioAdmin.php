@@ -60,19 +60,19 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/Pagina Web/Imagenes/Productos/T32/Imagen principal.webp" class="d-block w-100" alt="">
+                <img src="/Adicionales/ImgsAdminInicio/Sebas.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5> T32 okunami</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                    <h5>Administra tus productos</h5>
+                    <p>Inserta, mira, elimina y modifica los productos de tu stock</p>
+                    <a href="#" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/Pagina Web/Imagenes/Productos/Xt95/Imagen principal.jpg" class="d-block w-100" alt="">
+                <img src="/Adicionales/ImgsAdminInicio/Daniel Y Miguel.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5> XT95 PRO LENOVO </h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                    <h5>Administra tu base de usuarios</h5>
+                    <p>Inserta, mira, elimina y modifica los registros de tus usuarios</p>
+                    <a href="#" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -80,7 +80,7 @@
                 <div class="carousel-caption">
                     <h5> GM2 PRO LENOVO</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <a href="#" class="btn btn-primary mt">Mas informacion</a>
+                    <a href="#" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
         </div>
