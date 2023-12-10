@@ -46,9 +46,6 @@
                     <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
                     </li>
-                    <li class="nav-item">    
-                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
-                    </li>
                 </ul>
             </div>
         </div>

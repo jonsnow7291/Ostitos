@@ -1,3 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(52, 55, 54);
+}
+
 .Lista{
     margin-top: 5%;
+    text-align: center;
+}
+.filas{
+    width: 3%;
+    border:1px rgb(150, 166, 182) solid;
+    background-color: rgb(95, 95, 126);
+    color: rgb(0, 0, 0);
+}
+.columnas{
+    border: 1px solid;
+    background-color: rgb(53, 53, 71);
+    padding:1%;
 }
