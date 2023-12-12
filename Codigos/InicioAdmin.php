@@ -7,11 +7,11 @@
     include("Conexion.php");
     $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
     $resultadoUsuario=mysqli_query($conect,$sqlruta);
+    $filas= mysqli_fetch_assoc($resultadoUsuario);
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Admin</title>
-    <link rel="stylesheet" href="/Codigos/css/InAdmin.css">
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -38,10 +38,7 @@
                         <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
                     </li>
                     <li class="nav-item">    
-                    <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
-
-                            echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Admin:".$row['NicknameUsu']."</a>";
-                            }  ?>
+                            <a target='_blank' href='/Codigos/Editar.php' class='nav-link'>Administrador</a>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
@@ -60,7 +57,17 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/Adicionales/ImgsAdminInicio/Sebas.jpg" class="d-block w-100" alt="">
+                <img src="/Adicionales/ImgsAdminInicio/Carousel/Bienvenida.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <?php
+                        echo "<h5>Bienvevenido Admin :".$filas['NicknameUsu']."</h5>";
+                        ?>
+                        <p>Administrador de la familia ostitos</p>
+                        <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Adicionales/ImgsAdminInicio/Carousel/Sebas.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
                     <h5>Administra tus productos</h5>
                     <p>Inserta, mira, elimina y modifica los productos de tu stock</p>
@@ -68,7 +75,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/Adicionales/ImgsAdminInicio/Daniel Y Miguel.jpg" class="d-block w-100" alt="">
+            <img src="/Adicionales/ImgsAdminInicio/Carousel/Daniel Y Miguel.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
                     <h5>Administra tu base de usuarios</h5>
                     <p>Inserta, mira, elimina y modifica los registros de tus usuarios</p>

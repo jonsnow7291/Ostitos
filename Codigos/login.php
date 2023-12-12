@@ -37,12 +37,6 @@
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
                         </div>
-                        <input type="text" placeholder="Rol:(1:admin,2:Cliente,3:Trabajador)" class="input-control" name="RolUsu">
-                    </div>
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-person-circle"></i>
-                        </div>
                         <input type="text" placeholder="Email" class="input-control" name="Correo"  >
                     </div>
                     <div class="input-box">
