@@ -11,12 +11,16 @@ body{
 .Lista{
     margin-top: 5%;
     text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 10px;
 }
 .filas{
     width: 3%;
     border:1px rgb(150, 166, 182) solid;
     background-color: rgb(95, 95, 126);
     color: rgb(0, 0, 0);
+    border-radius: 5px;
 }
 .columnas{
     border: 1px solid;

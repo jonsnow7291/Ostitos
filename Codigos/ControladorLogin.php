@@ -24,16 +24,19 @@
                                 case 1:
                                     session_start();
                                     $_SESSION['IdUsu'] = $IdUsu;
+                                    $_SESSION['RolUsu'] = $RolUsu;
                                     header("location:InicioAdmin.php");
                                 break;
                                 case 2:
                                     session_start();
                                     $_SESSION['IdUsu'] = $IdUsu;
+                                    $_SESSION['RolUsu'] = $RolUsu;
                                     header("location:InicioCliente.php");
                                 break;
                                 case 3:
                                     session_start();
                                     $_SESSION['IdUsu'] = $IdUsu;
+                                    $_SESSION['RolUsu'] = $RolUsu;
                                     header("location:InicioTrabajador.php");
                                 break;
                                 default:

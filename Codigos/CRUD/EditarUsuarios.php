@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/Codigos/css/login.css">
 </head>
             <?php
-                include('Conexion.php');
+                include('../Conexion.php');
                 $IdUsu=$_GET['IdUsu'];
                 echo "$IdUsu";
                 $ruta=("select * from usuario where IdUsu='".$IdUsu."'");

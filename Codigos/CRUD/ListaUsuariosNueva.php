@@ -66,18 +66,19 @@
 					<?php while($fila=mysqli_fetch_assoc($Resul)){
 					?>
 					<tr>
-						<td class="filas"><?php echo $fila['Id']; ?></td>
-						<td class="filas"><?php echo $fila['Rol']; ?></td>
-						<td class="filas"><?php echo $fila['Nombre']; ?></td>
-						<td class="filas"><?php echo $fila['Apellido']; ?></td>
-						<td class="filas"><?php echo $fila['Apodo']; ?></td>
-						<td class="filas"><?php echo $fila['Edad']; ?></td>
-						<td class="filas"><?php echo $fila['Telefono']; ?></td>
-						<td class="filas"><?php echo $fila['Correo']; ?></td>
-						<td class="filas"><?php echo $fila['Contraseña']; ?></td>
-						<td class="filas"><?php echo $fila['FechaModi']; ?></td>
+						<td class="filas"><?php echo $fila['IdUsu']; ?></td>
+						<td class="filas"><?php echo $fila['NombreRol']; ?></td>
+						<td class="filas"><?php echo $fila['NombreUsu']; ?></td>
+						<td class="filas"><?php echo $fila['ApellidoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['NicknameUsu']; ?></td>
+						<td class="filas"><?php echo $fila['EdadUsu']; ?></td>
+						<td class="filas"><?php echo $fila['TelefonoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['CorreoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['ContraseñaUsu']; ?></td>
+						<td class="filas"><?php echo $fila['FyHRegUsu']; ?></td>
 
-						<td class="filas"><br><a  href="/Codigos/CRUD/EditarUsuarios.php">Editar</a><br><br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a  href="/Codigos/CRUD/EditarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>">Editar</a><br>
+						<br><a href="">Eliminar</a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
