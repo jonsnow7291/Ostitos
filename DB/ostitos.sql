@@ -83,7 +83,7 @@ CREATE TABLE `producto` (
 	ResumenPro					varchar(300),
 	`ModeloPro` 				varchar(100) NOT NULL,
 	`PrecioPro` 				float NOT NULL,
-	`UniDispoPro` 		int(11) NOT NULL,
+	`UniDispoPro` 				int(11) NOT NULL,
     linkProducto				Varchar(50),
 	`FotoPro` 					longblob,
 	FotoPro2 					longblob,

@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="/Codigos/css/login.css">
 </head>
             <?php
+                session_start();
                 include('../Conexion.php');
                 $IdUsu=$_GET['IdUsu'];
-                echo "$IdUsu";
                 $ruta=("select * from usuario where IdUsu='".$IdUsu."'");
                 $resul=mysqli_query($conect,$ruta);
                 while($fila = mysqli_fetch_assoc($resul)){
@@ -44,7 +44,7 @@
         <div class="form-content">
             <div class="box">
                 <h3>Modifica tus datos</h3>
-                <form action="Editar.php"  method="post">
+                <form action="EditarUsuarios.php"  method="post">
                     <div class="icons">
                             <i class="bi bi-person-fill"></i>
                         </div>
@@ -122,13 +122,16 @@
         if (mysqli_query($conect,$modificar)) {
             switch($RolNu){
                 case 1:
-                    header("Location:InicioAdmin.php?IdUsu=$IdNu");
+                    $_SESSION['IdUsu'];
+                    header("Location:../InicioAdmin.php");
                 break;
                 case 2:
-                    header("Location:InicioCliente.php?IdUsu=$IdNu");
+                    $_SESSION['IdUsu'];
+                    header("Location:InicioCliente.php");
                 break;
                 case 3:
-                    header("Location:InicioTrabajador.php?IdUsu=$IdNu");
+                    $_SESSION['IdUsu'];
+                    header("Location:InicioTrabajador.php");
                 break;
             } 
             

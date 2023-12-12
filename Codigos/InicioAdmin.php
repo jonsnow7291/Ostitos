@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <?php 
+    <?php
     session_start();
+    if($_SESSION['IdUsu']){ 
     include("Conexion.php");
     $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
     $resultadoUsuario=mysqli_query($conect,$sqlruta);
@@ -98,4 +99,7 @@
         crossorigin="anonymous"></script>
 
 </body>
+<?php }else{
+    
+}?>
 </html>
