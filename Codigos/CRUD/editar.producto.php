@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Codigos/css/Registro.css">
 </head>
+<?php
+    session_start();
+    if($_SESSION['IdUsu']){
+    include('../Conexion.php');
+    $IdPro=$_GET['IdPro'];
+    $ruta="select * from  producto where IdPro=".$IdPro;
+    $resul=mysqli_query($conect,$ruta);
+    while($fila=mysqli_fetch_assoc($resul)){
+?>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
@@ -29,7 +38,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/carrito.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -40,64 +49,75 @@
         <div class="form-content">
             <div class="box">
                 <h3>Modificar producto</h3>
-                <form action="registro.php" method="post">
+                <form action="editar.producto.php" method="post">
+                    <div class="input-box">
+                        <input type="hidden" value="<?php echo $fila['IdPro']?>" name="IdPro" class="input-control" required>
+                    </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-speaker-fill"></i>
+                            <h6>Nombre</h6>
                         </div>
-                        <input type="text" placeholder="Nombre del producto" name="producto" class="input-control" required>
+                        <input type="text" value="<?php echo $fila['NombrePro']?>" name="NombrePro" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-upc"></i>
+                            <h6>Serial</h6>
                         </div>
-                        <input type="password" placeholder="serial" name="serial" class="input-control" required>    
+                        <input type="number" value="<?php echo $fila['SerialPro']?>" name="serialPro" class="input-control" required readonly>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-bookmark-check"></i>
+                            <h6>Marca</h6>
                         </div>
-                        <input type="password" placeholder="Marca" name="Marca" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila['MarcaPro']?>" name="MarcaPro" class="input-control" required>    
                     </div>
                     
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-tags-fill"></i>
+                            <h6>Caracteristicas</h6>
                         </div>
-                        <input type="password" placeholder="Categoria" name="Categoria" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila['CaracteristicasPro']?>" name="CaracteristcasPro" class="input-control" required>    
+                    </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-cpu"></i>
+                            <h6>resumen</h6>
+                        </div>
+                        <input type="text" value="<?php echo $fila['ResumenPro']?>" name="ResumenPro" class="input-control" required>    
+                    </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-badge-tm"></i>
+
+                            <h6>Modelo</h6>
+                        </div>
+                        <input type="text" value="<?php echo $fila['ModeloPro']?>" name="ModeloPro" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-cash-coin"></i>
+                            <h6>Precio</h6>
                         </div>
-                        <input type="password" placeholder="Precio" name="Precio" class="input-control" required>    
+                        <input type="Number" value="<?php echo $fila['PrecioPro']?>" name="PrecioPro" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
-                            <i class="bi bi-chat-left-text"></i>
+                            <i class="bi bi-123"></i>
+                            <h6>Unidades disponibles</h6>
                         </div>
-                        <input type="password" placeholder="Descripcion" name="Descripcion" class="input-control" required>  
+                        <input type="text" value="<?php echo $fila['UniDispoPro']?>" name="UniPro" class="input-control" required>  
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-chat-left-text-fill"></i>
                         </div>
-                        <input type="password" placeholder="Resumen" name="Resumen" class="input-control" required>    
+                        <input type="Text" value="<?php echo $fila['linkProducto']?>" name="LinkPro" class="input-control" required>    
                     </div>
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-card-image"></i>
-                        </div>
-                        <input type="password" placeholder="Agregar imagenes" name="Agregar imagenes" class="input-control" required>   
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                        <input type="file"  name="archivosubido">
-                    </div>
-                    <button type="submit" class="btm" name="Agregar producto" >Confirmar edicion del producto</button>
+                    <button type="submit" class="btm" name="BtnModificarPro" >Confirmar edicion del producto</button>
                 </form>
             </div>
         </div>
@@ -106,4 +126,36 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+<?php 
+        if(isset($_POST['BtnModificarPro'])){
+            $Id=$_POST['IdPro'];
+            $Nombre=$_POST['NombrePro'];
+            $Serial=$_POST['SerialPro'];
+            $Marca=$_POST['Marcapro'];
+            $Carac=$_POST['CaracteristcasPro'];
+            $Resumen=$_POST['ResumenPro'];
+            $Modelo=$_POST['ModeloPro'];
+            $Precio=$_POST['PrecioPro'];
+            $UniDisPro=$_POST['UniPro'];
+            $Enlace=$_POST['LinkPro'];
+            if($Nombre!=null||$Serial!=null||$Marca!=null||$Carac!=null||$Resumen!=null||$Modelo!=null||$Precio!=null||$UniDisPro!=null||$Enlace!=null){
+                $rutaMod="update producto set NombrePro='".$Nombre."',SerialPro ='".$Serial."',MarcaPro =".$Marca." , CaracteristicasPro ='".$Carac."', ResumenPro =".$Resumen.", ModeloPro ='".$Modelo."', PrecioPro ='".$Precio."', UniDispoPro ='".$UniDisPro."',LinkProducto='".$Enlace."' where IdUsu =".$Id."";
+                if(mysqli_query($conect,$rutaMod)){
+                    header("Location:ListaUsuariosNueva.php");
+                }else{
+                    echo"Error".mysqli_error($conect);
+                }
+
+            }else{
+                echo"<h2>Algunos campos no estan llenos<br>
+                        Llenelos</h2>";
+            }
+
+
+        }
+    }
+}else{
+            header("location:Errores/Error_404.html");
+    
+        }?>
 </html>

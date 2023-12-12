@@ -11,6 +11,7 @@
 </head>
             <?php
                 session_start();
+                if($_SESSION){
                 include('../Conexion.php');
                 $IdUsu=$_GET['IdUsu'];
                 $ruta=("select * from usuario where IdUsu='".$IdUsu."'");
@@ -34,7 +35,7 @@
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -120,24 +121,13 @@
     if($NombreNu!=null||$ApellidoNu!=null||$EdadNu!=null||$NicknameNu!=null||$TelefonoNu!=null||$CorreoNu!=null||$ContraNu!=null){
         $modificar="update usuario set NombreUsu ='".$NombreNu."',ApellidoUsu ='".$ApellidoNu."',EdadUsu =".$EdadNu." , NicknameUsu ='".$NicknameNu."', TelefonoUsu =".$TelefonoNu.", CorreoUsu ='".$CorreoNu."', ContraseñaUsu ='".$ContraNu."' where IdUsu =".$IdNu."";
         if (mysqli_query($conect,$modificar)) {
-            switch($RolNu){
-                case 1:
-                    $_SESSION['IdUsu'];
-                    header("Location:../InicioAdmin.php");
-                break;
-                case 2:
-                    $_SESSION['IdUsu'];
-                    header("Location:InicioCliente.php");
-                break;
-                case 3:
-                    $_SESSION['IdUsu'];
-                    header("Location:InicioTrabajador.php");
-                break;
-            } 
-            
+            header("Location:ListaUsuariosNueva.php");
         } else {
              echo"Error".mysqli_error($conect);
         }
     }
-} 
+}
+                }else{
+                    header("location:Errores/Error_404.html");
+                } 
 ?>

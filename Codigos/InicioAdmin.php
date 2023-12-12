@@ -44,7 +44,7 @@
                         <a href="#" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/Admin.php" class="nav-link" target="_blank">Funciones Admin</a>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><?php session_start();
+		if($_SESSION['IdUsu']){?>
     <!--incluimos nuestra conexion a  base de datos--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,14 +33,14 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="/Codigos/InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
+                            <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="nav-link">Registros de usuarios</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
                         </li>
                 </ul>
             </div>
@@ -74,12 +75,15 @@
 						<td class="filas"><?php echo $fila['ModeloPro']; ?></td>
 						<td class="filas"><?php echo $fila['PrecioPro']; ?></td>
 						<td class="filas"><?php echo $fila['UniDispoPro']; ?></td>
-						<td class="filas"><br><a  href="/Codigos/CRUD/editar.producto.php">Editar</a><br><br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a  href="/Codigos/CRUD/editar.producto.php?IdPro=<?php echo $fila['IdPro']?>">Editar</a><br>
+										<br><a href="/Codigos/CRUD/EliminarUsuarios.php?IdPro=<?php echo $fila['IdUsu']?>">Eliminar</a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
 			</table>
 		</div>
 	</body>
-
+<?php }else{
+    header("location:../Errores/Error_404.html");
+}?>
 </html>

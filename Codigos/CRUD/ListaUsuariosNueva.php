@@ -36,10 +36,10 @@
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
+                            <a href="/Codigos/CRUD/ListaProductos.php" class="nav-link">Administra tus productos</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
                         </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
 						<th class="columnas">Telefono</th>
 						<th class="columnas">Corrreo</th>
 						<th class="columnas">Contraseña</th>
-						<th class="columnas">Unidades Disponibles</th>
+						<th class="columnas">Ultima modificacion</th>
 						<th class="columnas">Acciones</th>
 					</tr>
 				</thead>
