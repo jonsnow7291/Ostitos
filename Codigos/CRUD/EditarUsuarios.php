@@ -11,7 +11,7 @@
 </head>
             <?php
                 session_start();
-                if($_SESSION){
+                if($_SESSION['IdUsu']){
                 include('../Conexion.php');
                 $IdUsu=$_GET['IdUsu'];
                 $ruta=("select * from usuario where IdUsu='".$IdUsu."'");
