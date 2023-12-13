@@ -76,7 +76,7 @@
 						<td class="filas"><?php echo $fila['PrecioPro']; ?></td>
 						<td class="filas"><?php echo $fila['UniDispoPro']; ?></td>
 						<td class="filas"><br><a  href="/Codigos/CRUD/EditarProducto.php?IdPro=<?php echo $fila['IdPro']?>">Editar</a><br>
-										<br><a href="/Codigos/CRUD/EliminarUsuarios.php?IdPro=<?php echo $fila['IdUsu']?>">Eliminar</a><br></td>
+										<br><a href="/Codigos/CRUD/EliminarUsuarios.php?IdPro=<?php echo $fila['IdPro']?>">Eliminar</a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>

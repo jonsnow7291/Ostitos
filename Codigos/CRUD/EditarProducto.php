@@ -11,8 +11,8 @@
 </head>
 <?php
     session_start();
-    if($_SESSION['IdUsu']){
-    include('../Conexion.php');
+    if($_SESSION["IdUsu"]){
+    include("../Conexion.php");
     $IdPro=$_GET['IdPro'];
     $ruta="select * from  producto where IdPro=".$IdPro;
     $resul=mysqli_query($conect,$ruta);
@@ -23,7 +23,7 @@
 
         <div class="container">
 
-            <a href="" class="navbar-brand"> <span class="text-primary">osti</span>tos </a>
+            <a href="" class="navbar-brand"> <span class="text-primary">osti</span>tos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
                 aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,35 +44,34 @@
             </div>
         </div>
     </nav>
-    
     <section class="form-main">
         <div class="form-content">
             <div class="box">
                 <h3>Modificar producto</h3>
-                <form action="EditarProducto.php" method="post">
+                <form action="/Codigos/CRUD/EditarProducto.php" method="post">
                     <div class="input-box">
-                        <input type="hidden" value="<?php echo $fila['IdPro']?>" name="Id" class="input-control" required>
+                        <input type="hidden" value="<?php echo $fila["IdPro"]?>" name="Id" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-speaker-fill"></i>
                             <h6>Nombre</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['NombrePro']?>" name="Nombre" class="input-control" required>
+                        <input type="text" value="<?php echo $fila["NombrePro"]?>" name="Nombre" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-upc"></i>
                             <h6>Serial</h6>
                         </div>
-                        <input type="number" value="<?php echo $fila['SerialPro']?>" name="Serial" class="input-control" required readonly>    
+                        <input type="number" value="<?php echo $fila["SerialPro"]?>" name="Serial" class="input-control" required readonly>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-bookmark-check"></i>
                             <h6>Marca</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['MarcaPro']?>" name="Marca" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila["MarcaPro"]?>" name="Marca" class="input-control" required>    
                     </div>
                     
                     <div class="input-box">
@@ -80,14 +79,14 @@
                             <i class="bi bi-tags-fill"></i>
                             <h6>Caracteristicas</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['CaracteristicasPro']?>" name="Caracteristicas" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila["CaracteristicasPro"]?>" name="Caracteristica" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-cpu"></i>
                             <h6>resumen</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['ResumenPro']?>" name="Resumen" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila["ResumenPro"]?>" name="Resumen" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
@@ -95,30 +94,31 @@
 
                             <h6>Modelo</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['ModeloPro']?>" name="Modelo" class="input-control" required>    
+                        <input type="text" value="<?php echo $fila["ModeloPro"]?>" name="Modelo" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-cash-coin"></i>
                             <h6>Precio</h6>
                         </div>
-                        <input type="Number" value="<?php echo $fila['PrecioPro']?>" name="Precio" class="input-control" required>    
+                        <input type="Number" value="<?php echo $fila["PrecioPro"]?>" name="Precio" class="input-control" required>    
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-123"></i>
                             <h6>Unidades disponibles</h6>
                         </div>
-                        <input type="text" value="<?php echo $fila['UniDispoPro']?>" name="Uni" class="input-control" required>  
+                        <input type="text" value="<?php echo $fila["UniDispoPro"]?>" name="Uni" class="input-control" required>  
                     </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-chat-left-text-fill"></i>
                         </div>
-                        <input type="Text" value="<?php echo $fila['linkProducto']?>" name="Link" class="input-control" required>    
+                        <input type="Text" value="<?php echo $fila["linkProducto"]?>" name="Link" class="input-control" required>    
                     </div>
                     <button type="submit" class="btm" name="BtnMod" >Confirmar edicion del producto</button>
                 </form>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -129,35 +129,31 @@
 </html>
 <?php 
 
-            $Id=$_POST['Id'];
-            $Nombre=$_POST['Nombre'];
-            $Serial=$_POST['Serial'];
-            $Marca=$_POST['Marca'];
-            $Carac=$_POST['Caracteristcas'];
-            $Resumen=$_POST['Resumen'];
-            $Modelo=$_POST['Modelo'];
-            $Precio=$_POST['Precio'];
-            $UniDisPro=$_POST['Uni'];
-            $Enlace=$_POST['Link'];
-            if(isset($_POST['BtnMod'])){
+            $Id=$_POST["Id"];
+            $Nombre=$_POST["Nombre"];
+            $Serial=$_POST["Serial"];
+            $Marca=$_POST["Marca"];
+            $Carac=$_POST["Caracteristica"];
+            $Resumen=$_POST["Resumen"];
+            $Modelo=$_POST["Modelo"];
+            $Precio=$_POST["Precio"];
+            $UniDisPro=$_POST["Uni"];
+            $Enlace=$_POST["Link"];
+            if(isset($_POST["BtnMod"])){
                 if($Nombre!=null||$Serial!=null||$Marca!=null||$Carac!=null||$Resumen!=null||$Modelo!=null||$Precio!=null||$UniDisPro!=null||$Enlace!=null){
-                    $rutaMod = "UPDATE producto SET NombrePro='".$Nombre."', SerialPro=".$Serial.", MarcaPro=".$Marca.", CaracteristicasPro='".$Carac."', ResumenPro=".$Resumen.", ModeloPro='".$Modelo."', PrecioPro=".$Precio.", UniDispoPro=".$UniDisPro.", LinkProducto='".$Enlace."' WHERE IdPro=".$Id;
-                    if(mysqli_query($conect,$rutaMod)){
+                    $modificar="update producto set NombrePro ='".$Nombre."',SerialPro =".$Serial.",MarcaPro ='".$Marca."' , CaracteristicasPro ='".$Carac."', ResumenPro ='".$Resumen."', ModeloPro ='".$Modelo."', PrecioPro =".$Precio.", UniDispoPro =".$UniDisPro.",linkProducto =".$Enlace." where IdUsu =".$Id."";
+                    if(mysqli_query($conect,$modificar)){
                         header("location:ListaProductos.php");
                     }else{
                         echo "<h1>Error al realizar la actualización: " . mysqli_error($conect)."</h1>";
 
                     }
 
-                }else{
-                    echo"<h2>Algunos campos no estan llenos<br>
-                            Llenelos</h2>";
                 }
-
-
         }
-    }
-}else{
-    header("location:../Errores/Error_404.html");
     
-        }?>
+                }else{
+                    header("location:../Errores/Error_404.html");
+    
+                }
+?>

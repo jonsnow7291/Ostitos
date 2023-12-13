@@ -44,7 +44,7 @@
     <section class="form-main">
         <div class="form-content">
             <div class="box">
-                <h3>Modifica tus datos</h3>
+                <h3>Modifica tus Registros</h3>
                 <form action="EditarUsuarios.php"  method="post">
                     <div class="icons">
                             <i class="bi bi-person-fill"></i>
@@ -118,13 +118,13 @@
     $CorreoNu=$_POST['CorreoNuevo'];    
     $ContraNu=$_POST['ContraNueva'];
     if(isset($_POST["BtnMod"])){ 
-    if($NombreNu!=null||$ApellidoNu!=null||$EdadNu!=null||$NicknameNu!=null||$TelefonoNu!=null||$CorreoNu!=null||$ContraNu!=null){
-        $modificar="update usuario set NombreUsu ='".$NombreNu."',ApellidoUsu ='".$ApellidoNu."',EdadUsu =".$EdadNu." , NicknameUsu ='".$NicknameNu."', TelefonoUsu =".$TelefonoNu.", CorreoUsu ='".$CorreoNu."', ContraseñaUsu ='".$ContraNu."' where IdUsu =".$IdNu."";
-        if (mysqli_query($conect,$modificar)) {
-            header("Location:ListaUsuariosNueva.php");
-        } else {
-             echo"Error".mysqli_error($conect);
-        }
+        if($NombreNu!=null||$ApellidoNu!=null||$EdadNu!=null||$NicknameNu!=null||$TelefonoNu!=null||$CorreoNu!=null||$ContraNu!=null){
+            $modificar="update usuario set NombreUsu ='".$NombreNu."',ApellidoUsu ='".$ApellidoNu."',EdadUsu =".$EdadNu." , NicknameUsu ='".$NicknameNu."', TelefonoUsu =".$TelefonoNu.", CorreoUsu ='".$CorreoNu."', ContraseñaUsu ='".$ContraNu."' where IdUsu =".$IdNu."";
+            if (mysqli_query($conect,$modificar)) {
+                header("Location:ListaUsuariosNueva.php");
+            } else {
+                 echo"Error".mysqli_error($conect);
+            }
     }
 }
                 }else{
