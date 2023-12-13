@@ -13,6 +13,8 @@
 </head>
 <?php
 		include("../Conexion.php");
+		session_start();
+		if($_SESSION['IdUsu']){
 		$ruta="select * from usucompleto";
 		$Resul=mysqli_query($conect,$ruta);
 		
@@ -32,11 +34,14 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="../InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
+					<li>
+						<a href="../Admin.php" class="nav-link">Funciones Admin</a>
+					</li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/CRUD/ListaProductos.php" class="nav-link">Administra tus productos</a>
+                            <a href="/Codigos/CRUD/ListaProductos.php" class="nav-link">Lista de productos</a>
                         </li>
                         <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
@@ -45,6 +50,9 @@
             </div>
         </div>
     </nav>
+	<div class="DivTBnAgg">
+		<p>Aqui Puedes:<a href="/Codigos/CRUD/AgregarUsuarios.php"><button class="BtnAgg">Ingresar Nuevos Usuarios</button></a></p>
+	</div>
 		<div class="Lista">
 			<table>
 				<thead>
@@ -77,13 +85,16 @@
 						<td class="filas"><?php echo $fila['ContraseñaUsu']; ?></td>
 						<td class="filas"><?php echo $fila['FyHRegUsu']; ?></td>
 
-						<td class="filas"><br><a  href="/Codigos/CRUD/EditarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>">Editar</a><br>
-						<br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a class="Enlace" href="/Codigos/CRUD/EditarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>"><i class="bi bi-pencil-square"></i></a><br>
+						<br><a class="Enlace" href="EliminarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>"><i class="bi bi-trash-fill"></i></a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
 			</table>
 		</div>
 	</body>
+				<?php	} else{
+					header("Location:../Errores/Error_404.html");
+				}?>
 </html>
 

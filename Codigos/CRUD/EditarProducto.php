@@ -31,15 +31,18 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="../InicioAdmin.php" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../InicioAdmin.php" class="nav-link">Funciones Admin</a>
+                    </li>
+                    <li class="nav-item">    
+                        <a href="../CRUD/ListaProductos.php" class="nav-link">Lista de Productos</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
+                            <a href="../CerrarSesion.php" class="nav-link">Cerrar sesion</a>
                         </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
-                    </li>
                 </ul>
             </div>
         </div>

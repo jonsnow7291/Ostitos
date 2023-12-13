@@ -35,17 +35,22 @@
                     <li class="nav-item">
                         <a href="/Codigos/InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
+					<li>
+						<a href="../Admin.php" class="nav-link">Funciones Admin</a>
+					</li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="nav-link">Registros de usuarios</a>
-                        </li>
-                        <li class="nav-item">    
+                        <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="nav-link">Lista de usuarios</a>
+                    </li>
+                    <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
-                        </li>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+	<div class="DivTBnAgg">
+		<p>Aqui Puedes:<a href="/Codigos/CRUD/AgregarUsuarios.php"><button class="BtnAgg">Ingresar Nuevos Usuarios</button></a></p>
+	</div>
 	<div class="Lista">
 			<table>
 				<thead>
@@ -75,8 +80,8 @@
 						<td class="filas"><?php echo $fila['ModeloPro']; ?></td>
 						<td class="filas"><?php echo $fila['PrecioPro']; ?></td>
 						<td class="filas"><?php echo $fila['UniDispoPro']; ?></td>
-						<td class="filas"><br><a  href="/Codigos/CRUD/EditarProducto.php?IdPro=<?php echo $fila['IdPro']?>">Editar</a><br>
-										<br><a href="/Codigos/CRUD/EliminarUsuarios.php?IdPro=<?php echo $fila['IdPro']?>">Eliminar</a><br></td>
+						<td class="filas"><br><a class="Enlace" href="/Codigos/CRUD/EditarProducto.php?IdPro=<?php echo $fila['IdPro']?>"><i class="bi bi-pencil-square"></i></a><br>
+										<br><a class="Enlace" href="/Codigos/CRUD/EliminarProductos.php?php echo $fila['IdPro']?>"><i class="bi bi-trash-fill"></i></a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>

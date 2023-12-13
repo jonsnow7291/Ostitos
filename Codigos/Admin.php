@@ -39,9 +39,6 @@
                         <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                     <li class="nav-item">    
-                            <a target='_blank' href='/Codigos/Editar.php' class='nav-link'>Administrador</a>
-                    </li>
-                    <li class="nav-item">    
                         <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
                     </li>
                 </ul>
@@ -64,7 +61,6 @@
                         echo "<h5>Bienvevenido Admin :".$filas['NicknameUsu']."</h5>";
                         ?>
                         <p>Administrador de la familia ostitos</p>
-                        <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
             <div class="carousel-item">
