@@ -141,7 +141,7 @@
             $Enlace=$_POST["Link"];
             if(isset($_POST["BtnMod"])){
                 if($Nombre!=null||$Serial!=null||$Marca!=null||$Carac!=null||$Resumen!=null||$Modelo!=null||$Precio!=null||$UniDisPro!=null||$Enlace!=null){
-                    $modificar="update producto set NombrePro ='".$Nombre."',SerialPro =".$Serial.",MarcaPro ='".$Marca."' , CaracteristicasPro ='".$Carac."', ResumenPro ='".$Resumen."', ModeloPro ='".$Modelo."', PrecioPro =".$Precio.", UniDispoPro =".$UniDisPro.",linkProducto =".$Enlace." where IdUsu =".$Id."";
+                    $modificar="update producto set NombrePro ='".$Nombre."',SerialPro =".$Serial.",MarcaPro ='".$Marca."' , CaracteristicasPro ='".$Carac."', ResumenPro ='".$Resumen."', ModeloPro ='".$Modelo."', PrecioPro =".$Precio.", UniDispoPro =".$UniDisPro.",linkProducto ='".$Enlace."' where IdPro =".$Id;
                     if(mysqli_query($conect,$modificar)){
                         header("location:ListaProductos.php");
                     }else{
