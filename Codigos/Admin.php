@@ -60,14 +60,13 @@
                     <?php
                         echo "<h5>Bienvevenido Admin :".$filas['NicknameUsu']."</h5>";
                         ?>
-                        <p>Administrador de la familia ostitos</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="/Adicionales/ImgsAdminInicio/Carousel/Sebas.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
                     <h5>Administra tus productos</h5>
-                    <p>Inserta, mira, elimina y modifica los productos de tu stock</p>
+                    
                     <a href="/Codigos/CRUD/ListaProductos.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>
@@ -75,7 +74,7 @@
             <img src="/Adicionales/ImgsAdminInicio/Carousel/Daniel Y Miguel.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
                     <h5>Administra tu base de usuarios</h5>
-                    <p>Inserta, mira, elimina y modifica los registros de tus usuarios</p>
+                    
                     <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
                 </div>
             </div>

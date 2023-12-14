@@ -49,7 +49,7 @@
         </div>
     </nav>
 	<div class="DivTBnAgg">
-		<p>Aqui Puedes:<a href="/Codigos/CRUD/AgregarUsuarios.php"><button class="BtnAgg">Ingresar Nuevos Usuarios</button></a></p>
+		<p>Aqui Puedes:<a href="AgregarProductos.php"><button class="BtnAgg">Ingresar Nuevos Productos</button></a></p>
 	</div>
 	<div class="Lista">
 			<table>
