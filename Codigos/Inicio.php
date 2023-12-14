@@ -82,10 +82,6 @@
                         $nombreCarousel = $filaCarousel['Nombre'];
                         echo "$nombreCarousel";
                         ?></h5>
-                    <p><?php
-                        $ResCarousel = $filaCarousel['Resumen'];
-                        echo "$ResCarousel";
-                        ?> </p>
                     <a href="/Codigos/login.php" class="btn btn-primary mt">Mas informacion</a>
                 </div>
             </div>
@@ -198,7 +194,7 @@
                                     $ResultadoDestaUno=$conect->query("select * from vista_prodesta where IdProDesta = 4");
                                     $filaDestaUno = $ResultadoDestaUno->fetch_assoc();
                                     $NombreDestaUno=$filaDestaUno['Nombre'];
-                                    $CaracDestaUno=$filaDestaUno['Caracteristicas'];
+                                    $CaracDestaUno=$filaDestaUno['Resumen'];
                                     $ImgDestaUno=$filaDestaUno['Imagen3'];
                                     $LinkDestaUno=$filaDestaUno['Enlace'];
                                 ?>
@@ -220,7 +216,7 @@
                                     $ResultadoDestaDos=$conect->query("select * from vista_prodesta where IdProDesta = 5");
                                     $filaDestaDos = $ResultadoDestaDos->fetch_assoc();
                                     $NombreDestaDos=$filaDestaDos['Nombre'];
-                                    $CaracDestaDos=$filaDestaDos['Caracteristicas'];
+                                    $CaracDestaDos=$filaDestaDos['Resumen'];
                                     $ImgDestaDos=$filaDestaDos['Imagen3'];
                                     $LinkDestaDos=$filaDestaDos['Enlace'];
                                 ?>
@@ -242,7 +238,7 @@
                                     $ResultadoDestaTre=$conect->query("select * from vista_prodesta where IdProDesta = 6");
                                     $filaDestaTre = $ResultadoDestaTre->fetch_assoc();
                                     $NombreDestaTre=$filaDestaTre['Nombre'];
-                                    $CaracDestaTre=$filaDestaTre['Caracteristicas'];
+                                    $CaracDestaTre=$filaDestaTre['Resumen'];
                                     $ImgDestaTre=$filaDestaTre['Imagen3'];
                                     $LinkDestaTre=$filaDestaTre['Enlace'];
                                 ?>
