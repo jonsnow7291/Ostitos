@@ -22,7 +22,7 @@ body{
 }
 .BtnAgg:hover{
     background-color: rgb(121, 121, 164);
-    text-replace: 3s;
+    transition: 3s;
 }
 .Lista{
     margin-top: 1%;

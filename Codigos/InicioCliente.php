@@ -296,7 +296,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores. 
+                                Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores <br> Te esperamos!!. 
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>
@@ -332,7 +332,7 @@
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
-                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias para nuestra comunidad. 
+                                Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias.
                             </p>
                             <p class="socials">
                                 <i class="bi bi-twitter text-white mx-1"></i>

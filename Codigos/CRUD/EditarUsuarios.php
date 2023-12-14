@@ -34,7 +34,7 @@
                         <a href="../InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../InicioAdmin.php" class="nav-link">Funciones Admin</a>
+                        <a href="../Admin.php" class="nav-link">Funciones Admin</a>
                     </li>
                     <li class="nav-item">    
                         <a href="ListaUsuariosNueva.php" class="nav-link" >Lista de Usuarios</a>
