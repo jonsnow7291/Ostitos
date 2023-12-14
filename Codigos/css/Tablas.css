@@ -7,16 +7,35 @@
 body{
     background-color: rgb(52, 55, 54);
 }
+.DivTBnAgg{
+    margin-top: 6%;
+    margin-left: 2%;
+}
+.BtnAgg{
+    background-color: aqua;
+    border:none;
+    height: 50px;
+    width: 140px;
+    margin-left: 1%;
+    border-radius: 5px;
 
+}
 .Lista{
-    margin-top: 5%;
+    margin-top: 1%;
     text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 10px;
 }
 .filas{
     width: 3%;
     border:1px rgb(150, 166, 182) solid;
     background-color: rgb(95, 95, 126);
     color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+.Enlace{
+    color: black;
 }
 .columnas{
     border: 1px solid;

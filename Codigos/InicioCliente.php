@@ -4,6 +4,7 @@
     <!--incluimos nuestra conexion a  base de datos-->
     <?php 
     session_start();
+    if($_SESSION){
     include("Conexion.php");
     $IdLink=$_SESSION['IdUsu'];
     $sqlruta="select * from usuario where IdUsu =". $_SESSION['IdUsu'];
@@ -42,6 +43,9 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="#" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">    
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                     <li class="nav-item">    
                             <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
@@ -385,4 +389,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+<?php }else{
+    header("location:Errores/Error_404.html");
+}?>
 </html>

@@ -45,7 +45,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>

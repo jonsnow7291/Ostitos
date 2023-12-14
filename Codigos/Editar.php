@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar Datos</title>
@@ -10,10 +11,9 @@
     <link rel="stylesheet" href="/Codigos/css/login.css">
 </head>
             <?php
+                session_start();   
                 include('Conexion.php');
-                $IdUsu=$_GET['IdUsu'];
-                echo "$IdUsu";
-                $ruta=("select * from usuario where IdUsu='".$IdUsu."'");
+                $ruta=("select * from usuario where IdUsu='".$_SESSION['IdUsu'] ."'");
                 $resul=mysqli_query($conect,$ruta);
                 while($fila = mysqli_fetch_assoc($resul)){
             ?>
@@ -32,9 +32,11 @@
                     <li class="nav-item">
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
+                    <li class="nav-item"> 
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                    </li>
                     <li class="nav-item">
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>

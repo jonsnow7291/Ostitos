@@ -4,7 +4,7 @@
     <!--incluimos nuestra conexion a  base de datos--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ostitos Inicio</title>
+    <title>Lista productos</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -13,6 +13,8 @@
 </head>
 <?php
 		include("../Conexion.php");
+		session_start();
+		if($_SESSION['IdUsu']){
 		$ruta="select * from usucompleto";
 		$Resul=mysqli_query($conect,$ruta);
 		
@@ -32,19 +34,25 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="../InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
+					<li>
+						<a href="../Admin.php" class="nav-link">Funciones Admin</a>
+					</li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
+                            <a href="/Codigos/CRUD/ListaProductos.php" class="nav-link">Lista de productos</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
                         </li>
                 </ul>
             </div>
         </div>
     </nav>
+	<div class="DivTBnAgg">
+		<p>Aqui Puedes:<a href="/Codigos/CRUD/AgregarUsuarios.php"><button class="BtnAgg">Ingresar Nuevos Usuarios</button></a></p>
+	</div>
 		<div class="Lista">
 			<table>
 				<thead>
@@ -58,7 +66,7 @@
 						<th class="columnas">Telefono</th>
 						<th class="columnas">Corrreo</th>
 						<th class="columnas">Contraseña</th>
-						<th class="columnas">Unidades Disponibles</th>
+						<th class="columnas">Ultima modificacion</th>
 						<th class="columnas">Acciones</th>
 					</tr>
 				</thead>
@@ -66,23 +74,27 @@
 					<?php while($fila=mysqli_fetch_assoc($Resul)){
 					?>
 					<tr>
-						<td class="filas"><?php echo $fila['Id']; ?></td>
-						<td class="filas"><?php echo $fila['Rol']; ?></td>
-						<td class="filas"><?php echo $fila['Nombre']; ?></td>
-						<td class="filas"><?php echo $fila['Apellido']; ?></td>
-						<td class="filas"><?php echo $fila['Apodo']; ?></td>
-						<td class="filas"><?php echo $fila['Edad']; ?></td>
-						<td class="filas"><?php echo $fila['Telefono']; ?></td>
-						<td class="filas"><?php echo $fila['Correo']; ?></td>
-						<td class="filas"><?php echo $fila['Contraseña']; ?></td>
-						<td class="filas"><?php echo $fila['FechaModi']; ?></td>
+						<td class="filas"><?php echo $fila['IdUsu']; ?></td>
+						<td class="filas"><?php echo $fila['NombreRol']; ?></td>
+						<td class="filas"><?php echo $fila['NombreUsu']; ?></td>
+						<td class="filas"><?php echo $fila['ApellidoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['NicknameUsu']; ?></td>
+						<td class="filas"><?php echo $fila['EdadUsu']; ?></td>
+						<td class="filas"><?php echo $fila['TelefonoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['CorreoUsu']; ?></td>
+						<td class="filas"><?php echo $fila['ContraseñaUsu']; ?></td>
+						<td class="filas"><?php echo $fila['FyHRegUsu']; ?></td>
 
-						<td class="filas"><br><a  href="/Codigos/CRUD/EditarUsuarios.php">Editar</a><br><br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a class="Enlace" href="/Codigos/CRUD/EditarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>"><i class="bi bi-pencil-square"></i></a><br>
+						<br><a class="Enlace" href="EliminarUsuarios.php?IdUsu=<?php echo $fila['IdUsu']?>"><i class="bi bi-trash-fill"></i></a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
 			</table>
 		</div>
 	</body>
+				<?php	} else{
+					header("Location:../Errores/Error_404.html");
+				}?>
 </html>
 

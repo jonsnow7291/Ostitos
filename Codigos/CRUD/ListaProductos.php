@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><?php session_start();
+		if($_SESSION['IdUsu']){?>
     <!--incluimos nuestra conexion a  base de datos--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ostitos Inicio</title>
+    <title>Lista Productos</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -32,19 +33,24 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="/Codigos/InicioAdmin.php" class="nav-link">Inicio</a>
                     </li>
+					<li>
+						<a href="../Admin.php" class="nav-link">Funciones Admin</a>
+					</li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
-                        </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
-                        </li>
+                        <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="nav-link">Lista de usuarios</a>
+                    </li>
+                    <li class="nav-item">    
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link">Cerrar sesion</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+	<div class="DivTBnAgg">
+		<p>Aqui Puedes:<a href="/Codigos/CRUD/AgregarUsuarios.php"><button class="BtnAgg">Ingresar Nuevos Usuarios</button></a></p>
+	</div>
 	<div class="Lista">
 			<table>
 				<thead>
@@ -74,12 +80,15 @@
 						<td class="filas"><?php echo $fila['ModeloPro']; ?></td>
 						<td class="filas"><?php echo $fila['PrecioPro']; ?></td>
 						<td class="filas"><?php echo $fila['UniDispoPro']; ?></td>
-						<td class="filas"><br><a  href="/Codigos/CRUD/editar.producto.php">Editar</a><br><br><a href="">Eliminar</a><br></td>
+						<td class="filas"><br><a class="Enlace" href="/Codigos/CRUD/EditarProducto.php?IdPro=<?php echo $fila['IdPro']?>"><i class="bi bi-pencil-square"></i></a><br>
+										<br><a class="Enlace" href="/Codigos/CRUD/EliminarProductos.php?php echo $fila['IdPro']?>"><i class="bi bi-trash-fill"></i></a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
 			</table>
 		</div>
 	</body>
-
+<?php }else{
+    header("location:../Errores/Error_404.html");
+}?>
 </html>

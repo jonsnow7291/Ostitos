@@ -29,7 +29,7 @@
                             <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
                         </div>
-                        <input type="number" min="1" max="3" placeholder="Rol Usuario" name="rol" class="input-control" required>
+                        <input type="number" min="2" max="3" placeholder="Rol Usuario(2Cliente,3 Trabajador)" name="rol" class="input-control" required>
                     </div>
                     <div class="input-box">
                         <div class="icons">

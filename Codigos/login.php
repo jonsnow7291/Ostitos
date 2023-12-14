@@ -24,11 +24,6 @@
                     <li class="nav-item">
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
-                    <li class="nav-item">
- 
-                        <li class="nav-item">    
-                        <a href="/Codigos/Productos.html" class="nav-link" target="_blank">Productos</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -38,12 +33,6 @@
             <div class="box">
                 <h3>Bienvenido</h3>
                 <form action="login.php" method="post">
-                    <div class="input-box">
-                        <div class="icons">
-                            <i class="bi bi-person-circle"></i>
-                        </div>
-                        <input type="text" placeholder="Rol:(1:admin,2:Cliente,3:Trabajador)" class="input-control" name="RolUsu">
-                    </div>
                     <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-circle"></i>
