@@ -51,26 +51,29 @@ body{
     min-height: 300px;
 }
 .carousel-caption {
-bottom: 150px;
-z-index: 2;
+    margin: 4%;
+    top:20px;
+    bottom: 250px;
+    z-index: 2;
+    background-color: rgb(65, 76, 179);
+    opacity: 0.9;
+    border-radius: 20px;
+    border: 3px solid black ;
 }
 
 .carousel-caption h5{
     font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 25px;
+    color: #000000;
 }
 
-.carousel-caption h5 {
-    color: #5082e0;
-}
 .carousel-caption p {
     width: 60%;
     margin: auto;
     font-size: 18px;
     line-height: 1.9;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 71, 225);
 }
 
 .img-fluid .roundad-circle{
@@ -84,7 +87,7 @@ z-index: 2;
 }
 
 .navbar-dark .navbar-brand {
-color: rgb(145, 7, 200);
+color: rgb(125, 37, 166);
 font-size: 30px;
 text-transform: uppercase;
 font-weight: bold;
@@ -115,6 +118,10 @@ letter-spacing: 2px;
 @media(max-width: 767px ) {
     .navbar-nav{
         text-align: center;
+    }
+    .carousel-inner{
+        margin-top: 7%;
+
     }
     .carousel-item {
         height: 70vh;

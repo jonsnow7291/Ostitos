@@ -97,10 +97,7 @@
                         $nombreCarousel = $filaCarousel['Nombre'];
                         echo "$nombreCarousel";
                         ?></h5>
-                    <p><?php
-                        $ResCarousel = $filaCarousel['Resumen'];
-                        echo "$ResCarousel";
-                        ?> </p>
+
                         <?php $LinkProducto = $filaCarousel['Enlace'];?>
                     <a href="<?php echo "$LinkProducto"; ?>" class="btn btn-primary mt">Mas informacion</a>
                 </div>

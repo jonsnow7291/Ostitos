@@ -4,10 +4,11 @@
     <?php
     session_start();
     if($_SESSION['IdUsu']){
+    include("../Conexion.php");
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Usuarios</title>
+    <title>Agregar Productos</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -33,7 +34,7 @@
                         <a href="../Admin.php" class="nav-link">Funciones Admin</a>
                     </li>
                     <li class="nav-item">    
-                        <a href="../CRUD/ListaUsuariosNueva.php" class="nav-link">Lista Usuarios</a>
+                        <a href="ListaProductos.php" class="nav-link">Lista de productos</a>
                     </li>
                     <li class="nav-item">
                         <a href="../CerrarSesion.php" class="nav-link">Cerrar Sesion</a>
@@ -47,7 +48,7 @@
         <div class="form-content">
             <div class="box">
                 <h3>Ingresa Nuevos Productos</h3>
-                <form action="AgregarUsuarios.php" method="post">
+                <form action="AgregarProductos.php" method="post">
                 <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
@@ -104,30 +105,8 @@
                     </div>
                     <div>
                         <?php
-                        include("../Conexion.php");
-                        $Nombre = $_POST["Nombre"];
-                        $Serial = $_POST["Serial"];
-                        $Marca = $_POST["Marca"];
-                        $Carac = $_POST["Caracteristicas"];
-                        $Resumen = $_POST["Resumen"];
-                        $Modelo = $_POST["Modelo"];
-                        $Precio = $_POST["Precio"];
-                        $UniDis = $_POST["Uni"];
-                        $Enlace = $_POST["Link"];
-                        if(isset($_POST["BtnIngreso"])){
-                                /*aqui hacemos el procedimiento para meter nuestros datos*/
-                                $insertarDatos = ("insert into producto (NombrePro,SerialPro,MarcaPro,MarcaPro,CaracteristicasPro,ResumenPro,ModeloPro,PrecioPro,UniDipoPro,linkProducto) values('$Nombre','$Serial','$Marca','$Carac','$Resumen','$Modelo','$Precio','$UniDis','$Enlace')");
-                                $sql=$conect->query("select * from Producto where NombrePro='$Nombre' and SerialPro =$Serial and linkProducto ='$Enlace' and MarcaPro='$Marca'");
-                                if(!$datos = $sql->fetch_object()){
-                                    $ejecucion = mysqli_query($conect,$insertarDatos);
-                                    echo "<center><h4>Datos Registrados</h4></center>";
-                                    header("location:ListaUsuariosNueva.php");
-                                }else{
-                                    echo "<center><h5>Este producto ya ha sido ingresado</h5></center>";
-                                }
-                            
-
-                        }
+                            include("../Conexion.php"); 
+                            include("../CRUD/ControAgregarP.php");
                         ?>
                     </div>
                     <button type="submit" class="btm"name="BtnIngreso" >Registrarse</button>
