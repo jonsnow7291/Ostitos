@@ -26,7 +26,6 @@
 }
 
 body{
-    background-color: #273041;
     background-color: rgba(0, 0, 255, 0.5);
     color: var(--text-linght-gray);
     font-family: 'Poppins', sans-serif;
