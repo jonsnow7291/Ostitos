@@ -37,12 +37,12 @@
                         <a href="/Codigos/Productos.php" class="nav-link text-muted">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link text-muted">Inicio de Sesion</a>
-                        </li>
-                        <li class="nav-item">
+                    <li class="nav-item">
+                        <a href="/Codigos/login.php" class="nav-link text-muted">Inicio de Sesion</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/Codigos/registro.php" class="nav-link text-muted">Registrate</a>
-                        </li>
+                    </li>
                         
                 </ul>
             </div>

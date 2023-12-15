@@ -38,6 +38,30 @@ body{
     font-weight: 500;
 }
 
+.navbar-dark .navbar-brand {
+    color: rgb(253, 6, 6);
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.filtro{
+    font-size: 15px;
+    color: #bababa;
+}
+
+.precio{
+    font-weight: 700;
+    color: rgb(52, 49, 49);
+}
+
+.titulo{
+    text-align: center;
+    padding: 10%;
+    font-size: 38px;
+}
+
 header{
     display: grid;
     grid-template-columns: 1fr 50px;
@@ -179,34 +203,4 @@ header .shopping span{
 
 .listCard .count{
     margin: 0 10px;
-}
-
-.navbar-nav a{
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.navbar-dark .navbar-brand {
-color: rgb(163, 6, 129);
-font-size: 30px;
-text-transform: uppercase;
-font-weight: bold;
-letter-spacing: 2px;
-}
-
-.filtro{
-    font-size: 15px;
-    color: #bababa;
-}
-
-.precio{
-    font-weight: 700;
-    color: rgb(52, 49, 49);
-}
-
-.titulo{
-    text-align: center;
-    padding: 10%;
-    font-size: 38px;
 }

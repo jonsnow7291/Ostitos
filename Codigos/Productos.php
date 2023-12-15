@@ -4,6 +4,7 @@
     <?php 
     session_start();
     include("Conexion.php");
+    $Rol = null;
     if(isset($_SESSION['IdUsu'])){
     $ruta="Select * from usuario where Idusu = ".$_SESSION['IdUsu'];
     $result=mysqli_query($conect,$ruta);
@@ -25,14 +26,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
             <div class="container">
-
-                <a href="#" class="navbar-brand"> <span class="text-primary">osti</span>tos </a>}
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
-                    aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarS">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a href="#" class="navbar-brand"> <span class="text-primary">osti</span>tos </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                        aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarS">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <?php
                         if($Rol==2){
@@ -51,6 +51,10 @@
                             <li class='nav-item'>
                                 <a href='/Codigos/login.php' class='nav-link'>Inicio de Sesion</a>
                             </li>
+                            <li class='nav-item'>
+                                <a href='/Codigos/registro.php' class='nav-link'>Registrate</a>
+                            </li>
+
                             "
                             ;
                         }

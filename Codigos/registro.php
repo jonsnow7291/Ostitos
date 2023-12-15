@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Codigos/css/Registro.css">
 </head>
+<div>
+    <?php
+    include("Conexion.php");
+    include("ControReg.php");
+    ?>
+</div>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
@@ -88,12 +94,6 @@
                             <i class="bi bi-shield-lock-fill"></i>
                         </div>
                         <input type="password" placeholder="Contraseña" name="contraseña" class="input-control" required>    
-                    </div>
-                    <div>
-                        <?php
-                        include("Conexion.php");
-                        include("ControReg.php");
-                        ?>
                     </div>
                     <button type="submit" class="btm"name="Registro" >Registrarse</button>
                 </form>
