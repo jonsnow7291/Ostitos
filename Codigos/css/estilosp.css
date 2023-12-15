@@ -14,7 +14,14 @@
     --button-hover-color: hsla(0, 0%, 0%, 0.3);
 }
 
-.body{
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
     background-color: var(--body-bg-color);
     color: var(--text-linght-gray);
     font-family: 'Poppins', sans-serif;
@@ -23,6 +30,147 @@
     line-height: 1.5;
     overflow-x: hidden;
 }
+
+body::after,
+body::before{
+    content: '';
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+
+body::before{
+    background-color: var(--text-linght-gray);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+body::after{
+    background-color: var(--green);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+
+
+.form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    background-color: var();
+    z-index: 1;
+
+}
+
+.form-content  .box{
+    border-color: var(--glass-bg-color) ;
+    border: 1px solid var(--border-color-lead);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+    background-color: rgba(255, 255, 255, 0.24)
+}
+
+.input-control::placeholder{
+    color: inherit;
+    opacity: 1;
+}
+
+.form-content h3{
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.form-content form{
+    margin: 25px 0 20px;
+}
+
+.form-content .input-box{
+    margin: 25px;
+
+}
+
+.form-content .input-control{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color-lead);
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-content .input-control:focus{
+    outline: none;
+}
+
+.form-content .input-link{
+    margin-top: 10px;
+    text-align: right;
+
+}
+
+.form-content .btm{
+    height: 45px;
+    width:  100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background: linear-gradient(to right, var(--green), var(--lead));
+    border: none;
+    color: var(--text-linght-gray);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.form-content .btm::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: backgraund-color 0.5 ease;
+    z-index: -1;
+}
+
+.form-content .btn:hover::before{
+    background-color:  var(--button-hover-color);
+}
+
+.form-content p{ text-align: center;
+
+
+}
+.icons{
+    font-size: 30px;
+    text-align: center;
+}
 .navbar-nav a{
     font-size: 20px;
     text-transform: uppercase;
@@ -30,12 +178,13 @@
 }
 
 .navbar-dark .navbar-brand {
-    color: rgb(253, 6, 6);
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
+color: rgb(253, 6, 6);
+font-size: 30px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 2px;
 }
+
 .img{
     width: 500px;
     height: 500px;
