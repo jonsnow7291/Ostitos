@@ -17,10 +17,13 @@
 }
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container{
+    border-radius: 10px;
+    opacity: 0.9;
 }
 
 body{

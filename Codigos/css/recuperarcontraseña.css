@@ -1,0 +1,52 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--body-bg-color);
+    color: var(--text-linght-gray);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+.formulario{
+    background-color:rgb(130, 121, 168);
+    width: 34%;
+    height: 20%;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 18%;
+    border-radius: 20px;
+}
+.entrada{
+    width: 50%;
+    height: 15%;
+    border-radius: 10px;
+}
+.btn{
+    margin: 2%;
+    height: 30%;
+    width:26%;
+}
+.label{
+    margin: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
