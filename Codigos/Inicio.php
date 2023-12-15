@@ -22,7 +22,7 @@
 <body>
 
     <!--aqui empieza el menu de navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-subtle fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
 
         <div class="container">
 
@@ -32,19 +32,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarS">
-                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link text-muted">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link text-muted">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link text-muted">Inicio de Sesion</a>
+                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
                         </li>
                         <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link text-muted">Registro</a>
+                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
                         </li>
                         
                 </ul>
@@ -92,7 +92,7 @@
         <?php } ?>
     </div>
 
-        <button class=" carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                    <div class="about-text text-muted">
+                    <div class="about-text text-white">
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
@@ -127,7 +127,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-muted pb-5">
+                    <div class="section-header text-center text-white pb-5">
                         <h2>Nuestros servicios</h2>
                         <p>
                             Somos una empresa de tecnología, que se especializa en la venta de artículos electrónicos y cuyo énfasis se centra en la distribución de audífonos inalámbricos, contamos con diferentes tipos de productos los cuales se ajustan a tus requerimientos. Desde audífonos especiales para el gaming, hasta audífonos especiales para el trabajo. Nuestra misión es brindarte la mejor atención y calidad mediante nuestros productos, ayudando a nuestros clientes a la hora de elegir entre la gran gama de productos existen en el mercado aquellos que se adapten a lo que realmente están buscando con una excelente relación costo beneficio.
@@ -137,7 +137,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-muted text-center bg-primary-subtle pb-2">
+                    <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-check-fill"></i>
                             <h3 class="card-title">Registro</h3>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-muted text-center bg-primary-subtle pb-2">
+                    <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-circle"></i>
                             <h3 class="card-title">Inicio de sesion</h3>
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-muted text-center bg-primary-subtle pb-2">
+                    <div class="card text-white text-center bg-dark pb-2">
                         <div class="card-body">
                             <i class="bi bi-cart-check-fill"></i>
                             <h3 class="card-title">Carrito</h3>
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-muted pb-5">
+                    <div class="section-header text-center text-white pb-5">
                         <h2>Productos destacados</h2>
                         <p>
                             ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!
@@ -190,8 +190,8 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-primary-subtle pb-2">
-                        <div class="card-body text-muted">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del primer producto destacado-->
                                 <?php
@@ -212,8 +212,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-primary-subtle pb-2">
-                        <div class="card-body text-muted">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del segundo producto destacado-->
                                 <?php
@@ -234,8 +234,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-primary-subtle pb-2">
-                        <div class="card-body text-muted">
+                <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del Tercer producto destacado-->
                                 <?php
@@ -263,7 +263,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-muted text-center text-white pb-5">
+                    <div class="section-header text-center text-white pb-5">
                         <h2>Asesores</h2>
                         <p> 
                             Contamos con un excelente equipo de trabajo es por esto que desde aquí puedes conocerlos mejor, recuerda que ellos siempre estarán dispuestos a atenderte tu solicitud.
@@ -274,8 +274,8 @@
 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-primary-subtle">
-                        <div class="card-body text-muted">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -292,8 +292,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-primary-subtle">
-                        <div class="card-body text-muted">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -310,8 +310,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-primary-subtle">
-                        <div class="card-body text-muted">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -328,8 +328,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-primary-subtle">
-                        <div class="card-body text-muted">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -353,7 +353,7 @@
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-muted pb-5">
+                    <div class="section-header text-center text-white pb-5">
                         <h2>Contacto</h2>
                         <p>
                             Puedes contactarnos desde una amplia gama de aplicaciones como por ejemplo mediante nuestro correo electrónico o mediante nuestras redes sociales
@@ -363,37 +363,11 @@
             </div>
         </div>
     </section>
-    <body>
-
-    <footer class="bg-info text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
-                <hr class="mb-4">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
-                </p>
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
-                    <hr class="mb-4">
-                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-house-door-fill"></i> PUNTO FISICO</a><br>
-                    <a href="+57 310 3143832"><i class="bi bi-telephone-fill"></i> TELEFONO</a><br>
-                    <a href="#"><i class="bi bi-envelope-fill"></i> CORREO</a><br>
-                    <a href="#"><i class="bi bi-messenger"></i> MESSENGER</a>
-                </div>
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"> REDES SOCIALES</h5>
-                    <hr class="mb-4">
-                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-facebook"></i> FACEBOOK</a><br>
-                    <a href="+57 310 3143832"><i class="bi bi-instagram"></i> INSTAGRAM</a><br>
-                    <a href="#"><i class="bi bi-tiktok"></i> TIKTOK</a><br>
-                    <a href="#"><i class="bi bi-whatsapp"></i> WHATSAPP</a><br>
-                </div>
-
-            </div>
+    <footer class="bg-black p-2 text-center">
+        <div class="container">
+            <p class="text-white"> Ostitos.com</p>
         </div>
     </footer>
-    </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
