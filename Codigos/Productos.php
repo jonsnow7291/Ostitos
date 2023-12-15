@@ -8,7 +8,7 @@
     $ruta="Select * from usuario where Idusu = ".$_SESSION['IdUsu'];
     $result=mysqli_query($conect,$ruta);
     $fila = $result->fetch_assoc();
-    $Rol= $fila['RolUsu'];
+    $Rol = $fila['RolUsu'];
     }
     ?>
     <meta charset="UTF-8">
@@ -58,19 +58,19 @@
                     </ul>
                 </div>
                 <header>
-                    <div class="carrito">
+                    <div class="shopping">
                         <img src="/Adicionales/Imagen Carrito/3144456.png">
                         <span class="quantity">0</span>
                     </div>
                 </header>
-                <div class="lista"></div>
-            </div>            
-            <div class="inicioCarrito">
+            </div>
+            <div class="list"></div>          
+            <div class="card">
                     <h1>Tu carrito</h1>
-                    <ul class="listaCarrito"></ul>
+                    <ul class="listCard"></ul>
                     <div class="checkOut">
                         <div class="total">0</div>
-                        <div class="cerrarCarrito">Cerrar</div>
+                        <div class="closeShopping">Cerrar</div>
                     </div>
             </div>
         </nav>
