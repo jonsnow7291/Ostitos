@@ -94,6 +94,36 @@
             </div>
         </div>  
     </section>
+    <body>
+        <footer class="bg-black text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+                <hr class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                </p>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
+                    <hr class="mb-4">
+                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-house-door-fill"></i> PUNTO FISICO</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-telephone-fill"></i> TELEFONO</a><br>
+                    <a href="#"><i class="bi bi-envelope-fill"></i> CORREO</a><br>
+                    <a href="#"><i class="bi bi-messenger"></i> MESSENGER</a>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"> REDES SOCIALES</h5>
+                    <hr class="mb-4">
+                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-facebook"></i> FACEBOOK</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-instagram"></i> INSTAGRAM</a><br>
+                    <a href="#"><i class="bi bi-tiktok"></i> TIKTOK</a><br>
+                    <a href="#"><i class="bi bi-whatsapp"></i> WHATSAPP</a><br>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+        </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>

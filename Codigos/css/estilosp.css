@@ -83,5 +83,8 @@ letter-spacing: 2px;
     margin-top: -357px;
     margin-left: 545px;
 }
+.img-efecto:hover{
+    transform: scale(1.1);
+}
 
 
