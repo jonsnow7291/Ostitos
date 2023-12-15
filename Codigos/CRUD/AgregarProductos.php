@@ -48,7 +48,7 @@
         <div class="form-content">
             <div class="box">
                 <h3>Ingresa Nuevos Productos</h3>
-                <form action="AgregarProductos.php" method="post">
+                <form action="AgregarProductos.php" method="post" enctype="multipart/form-data">
                 <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
@@ -125,6 +125,6 @@
         crossorigin="anonymous"></script>
     <?php }else{ header("location:/Codigos/Errores/Error_404.html");
 
-    }?>
+    } ?>
 </body>
 </html>
