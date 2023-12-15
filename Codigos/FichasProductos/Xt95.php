@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G7S</title>
+    <title>G9S</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -12,13 +12,12 @@
                 <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         session_start();
-                        if($_SESSION['IdUsu']){
                         include ("../Conexion.php");
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
                         $FilaUsu=$resultadoUsu->fetch_assoc();
-                        $NombreUsu=$FilaUsu['NombreUsu'];
                         $Rol=$FilaUsu['RolUsu'];
+                        $NombreUsu=$FilaUsu['NombreUsu'];
                         $RutaP = "select * from fichas_productos where Id = 3 ";
                         $resultadoP = $conect->query($RutaP);
                         $fila = $resultadoP->fetch_assoc();
@@ -50,6 +49,8 @@
                             echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio Cliente</a>";
                         }elseif($Rol==1){
                             echo "<a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Admin</a>";
+                        }elseif(!$rol){
+                            echo "<a href='/Codigos/Inicio.php' class='nav-link'>Inicio Admin</a>";
                         }
                         ?>
                     </li>
@@ -130,5 +131,4 @@ En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea 
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
-<?php }?>
 </html>

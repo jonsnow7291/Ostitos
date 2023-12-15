@@ -221,7 +221,7 @@
                             </div>
                             <h3><?php echo"$NombreDestaUno";?></h3>
                             <p class="lead"><?php echo "$CaracDestaUno"; ?></p>
-                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
+                            <a href="<?php echo $LinkDestaUno?>"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
                             </div>
                             <h3><?php echo"$NombreDestaDos";?></h3>
                             <p class="lead"><?php echo"$CaracDestaDos";?></p>
-                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
+                            <a href="<?php echo $LinkDestaDos?>"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
                             </div>
                             <h3><?php echo"$NombreDestaTre";?></h3>
                             <p class="lead"><?php echo"$CaracDestaTre";?></p>
-                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
+                            <a href="<?php echo $LinkDestaTre?>"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>

@@ -12,7 +12,6 @@
                 <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         session_start();
-                        if($_SESSION['IdUsu']){
                         include ("../Conexion.php");
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
@@ -50,6 +49,8 @@
                             echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio Cliente</a>";
                         }elseif($Rol==1){
                             echo "<a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Admin</a>";
+                        }elseif(!$rol){
+                            echo "<a href='/Codigos/Inicio.php' class='nav-link'>Inicio Admin</a>";
                         }
                         ?>
                     </li>
@@ -130,5 +131,4 @@ En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea 
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
-<?php }?>
 </html>

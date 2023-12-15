@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G7S</title>
+    <title>G9S</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -12,14 +12,12 @@
                 <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         session_start();
-                        if($_SESSION['IdUsu']){
                         include ("../Conexion.php");
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
                         $FilaUsu=$resultadoUsu->fetch_assoc();
-                        $IdUsu=$FilaUsu['IdUsu'];
-                        $NombreUsu=$FilaUsu['NombreUsu'];
                         $Rol=$FilaUsu['RolUsu'];
+                        $NombreUsu=$FilaUsu['NombreUsu'];
                         $RutaP = "select * from fichas_productos where Id = 4 ";
                         $resultadoP = $conect->query($RutaP);
                         $fila = $resultadoP->fetch_assoc();
@@ -51,6 +49,8 @@
                             echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio Cliente</a>";
                         }elseif($Rol==1){
                             echo "<a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Admin</a>";
+                        }elseif(!$rol){
+                            echo "<a href='/Codigos/Inicio.php' class='nav-link'>Inicio Admin</a>";
                         }
                         ?>
                     </li>
@@ -70,17 +70,10 @@
                 <div class="">
                 <img <?php echo'class="imagenes-pequeñas" src="data:image/jpeg;base64,'.base64_encode($Imagen3).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
                 </div>
-                <div class="img-efecto">
-                    <img <?php echo'class="img-1" src="data:image/jpeg;base64,'.base64_encode($Imagen4).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
-                </div>
-                <div class="img-efecto">
-                    <img <?php echo'class="img-2" src="data:image/jpeg;base64,'.base64_encode($Imagen5).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
-                </div>
-                <div class="img-efecto">
-                    <img <?php echo'class="img-3" src="data:image/jpeg;base64,'.base64_encode($Imagen6).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
-                <div class="img-efecto">
-                    <img <?php echo'class="img-4" src="data:image/jpeg;base64,'.base64_encode($Imagen7).'" alt="Imagen del Producto" class="d-bock w-100"'?>>            
-                </div>
+                <img <?php echo'class="img-1" src="data:image/jpeg;base64,'.base64_encode($Imagen4).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
+                <img <?php echo'class="img-2" src="data:image/jpeg;base64,'.base64_encode($Imagen5).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
+                <img <?php echo'class="img-3" src="data:image/jpeg;base64,'.base64_encode($Imagen6).'" alt="Imagen del Producto" class="d-bock w-100"'?>>
+                <img <?php echo'class="img-4" src="data:image/jpeg;base64,'.base64_encode($Imagen7).'" alt="Imagen del Producto" class="d-bock w-100"'?>>            </div>
         </div>
         <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
             <div class="text-black" class="text">
@@ -97,7 +90,7 @@
                 </h5>
                 </p>
                 <div class="boton">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
+                                       <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
                 </div>    
             </div>
         </div>  
@@ -138,8 +131,4 @@ En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea 
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
-<?php } else{
-    header("location");
-}?>
-<a href="../Errores/Error_404.html"></a>
 </html>
