@@ -55,7 +55,7 @@
                         ?>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" >Productos</a>
                     </li>
                 </ul>
             </div>

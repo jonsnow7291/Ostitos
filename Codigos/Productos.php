@@ -32,7 +32,7 @@
                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarS">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         <?php
                         if($Rol==2){
@@ -96,14 +96,14 @@
                             <div class="img">
                                 <div class="img-area mb-4">
                                 <?php
-                                echo '<img class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded" src="data:image/jpeg;base64,' . base64_encode($fila["FotoPro"]) . '" alt="Imagen del Producto" class="d-bock w-100">';
+                                echo '<a href="'.$fila['linkProducto'].'"><img class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded" src="data:image/jpeg;base64,' . base64_encode($fila["FotoPro"]) . '" alt="Imagen del Producto" class="d-bock w-100"></a>';
                                 ?>
                                 </div>
                             </div>
                             <h6 class="filtro">GAMER</h6>
                             <h3><?php echo $fila['NombrePro']?>
                             <h5 class="precio">$<?php echo $fila['PrecioPro']?></h5>
-                            <a href="<?php echo $fila['linkProducto']?>"><button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button></a>
+                            <a href="#"><button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button></a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,9 @@
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
                 <hr class="mb-4">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea que estés buscando la potencia de bajos profundos, la claridad de tonos altos o la comodidad durante todo el día, tenemos el audífono perfecto para ti.
+<br>
+¿Tienes preguntas, comentarios o necesitas asistencia personalizada? Estamos aquí para ayudarte. ¡Contáctanos y deja que nuestro equipo experto te guíe hacia el audífono ideal para satisfacer tus necesidades auditivas!
                 </p>
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
