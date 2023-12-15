@@ -8,9 +8,11 @@ $Modelo = $_POST["Modelo"];
 $Precio = $_POST["Precio"];
 $UniDis = $_POST["Uni"];
 $Enlace = $_POST["Link"];
+$tempImagen =$_FILES['Img']['tmp_name'];
+$Imagen = addslashes(file_get_contents($tempImagen));
 if(isset($_POST["BtnIngreso"])){
         /*aqui hacemos el procedimiento para meter nuestros datos*/
-        $insertarDatos = ("insert into producto (NombrePro,SerialPro,MarcaPro,CaracteristicasPro,ResumenPro,ModeloPro,PrecioPro,UniDispoPro,linkProducto) values('$Nombre',$Serial,'$Marca','$Carac','$Resumen','$Modelo',$Precio,$UniDis,'$Enlace')");
+        $insertarDatos = ("insert into producto (NombrePro,SerialPro,MarcaPro,CaracteristicasPro,ResumenPro,ModeloPro,PrecioPro,UniDispoPro,linkProducto,FotoPro) values('$Nombre',$Serial,'$Marca','$Carac','$Resumen','$Modelo',$Precio,$UniDis,'$Enlace','$Imagen')");
         $sql=$conect->query("select * from Producto where NombrePro='$Nombre' and SerialPro =$Serial and linkProducto ='$Enlace'");
         if(!$datos = $sql->fetch_object()){
             $ejecucion=mysqli_query($conect,$insertarDatos);

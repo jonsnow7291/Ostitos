@@ -17,6 +17,7 @@
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
                         $FilaUsu=$resultadoUsu->fetch_assoc();
+                        $IdUsu=$FilaUsu['IdUsu'];
                         $NombreUsu=$FilaUsu['NombreUsu'];
                         $Rol=$FilaUsu['RolUsu'];
                         $RutaP = "select * from fichas_productos where Id = 4 ";
@@ -47,9 +48,9 @@
                     <li class="nav-item">
                         <?php
                         if($Rol==2){
-                            echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio</a>";
+                            echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio Cliente</a>";
                         }elseif($Rol==1){
-                            echo "<a href='/Codigos/InicioAmin.php' class='nav-link'>Inicio</a>";
+                            echo "<a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Admin</a>";
                         }
                         ?>
                     </li>
@@ -96,7 +97,7 @@
                 </h5>
                 </p>
                 <div class="boton">
-                    <a href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20estoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
                 </div>    
             </div>
         </div>  
@@ -108,7 +109,9 @@
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
                 <hr class="mb-4">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea que estés buscando la potencia de bajos profundos, la claridad de tonos altos o la comodidad durante todo el día, tenemos el audífono perfecto para ti.
+<br>
+¿Tienes preguntas, comentarios o necesitas asistencia personalizada? Estamos aquí para ayudarte. ¡Contáctanos y deja que nuestro equipo experto te guíe hacia el audífono ideal para satisfacer tus necesidades auditivas!
                 </p>
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
@@ -135,5 +138,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
-<?php }?>
+<?php } else{
+    header("location");
+}?>
+<a href="../Errores/Error_404.html"></a>
 </html>

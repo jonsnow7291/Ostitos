@@ -68,100 +68,30 @@
                 <div class="section-header text-center text-black pb-5">
                     <h2 class="titulo">Productos</h2>
                 </div>
+                <?php 
+                $RutaProductos="select * from producto";
+                $Resultado=mysqli_query($conect,$RutaProductos);
+                while($fila = $Resultado->fetch_assoc()){
+                ?>
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="text-center pb-3">
                         <div class="">
                             <div class="img">
                                 <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/G11/Imagen principal.webp" class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
+                                <?php
+                                echo '<img class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded" src="data:image/jpeg;base64,' . base64_encode($fila["FotoPro"]) . '" alt="Imagen del Producto" class="d-bock w-100">';
+                                ?>
                                 </div>
                             </div>
                             <h6 class="filtro">GAMER</h6>
-                            <h3>G11 GAMER</h3>
-                            <h5 class="precio">$65.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
+                            <h3><?php echo $fila['NombrePro']?>
+                            <h5 class="precio">$<?php echo $fila['PrecioPro']?></h5>
+                            <a href="<?php echo $fila['linkProducto']?>"><button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="text-center pb-3">
-                        <div class="card-body text-white">
-                            <div class="img">
-                                <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/GM2/Imagen principal.webp" class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
-                                </div>
-                            </div>
-                            <h6 class="filtro">GAMER</h6>
-                            <h3>GM2 PRO LENOVO</h3>
-                            <h5 class="precio">$85.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="text-center pb-3">
-                        <div class="card-body text-white">
-                            <div class="img">
-                                <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/X15/Imagen principal.jpg" class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
-                                </div>
-                            </div>
-                            <h6 class="filtro">GAMER</h6>
-                            <h3>X15 GAMER</h3>
-                            <h5 class="precio">$75.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="text-center pb-3">
-                        <div class="card-body text-white">
-                            <div class="img">
-                                <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/T32/Imagen principal.webp" class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
-                                </div>
-                            </div>
-                            <h6 class="filtro">GAMER</h6>
-                            <h3>T32 OKUNAMY</h3>
-                            <h5 class="precio">$150.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="text-center pb-3">
-                        <div class="card-body text-white">
-                            <div class="img">
-                                <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/Xt95/Imagen principal.jpg" class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
-                                </div>
-                            </div>
-                            <h6 class="filtro">SPORT</h6>
-                            <h3>XT95 PRO LENOVO</h3>
-                            <h5 class="precio">$95.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="text-center pb-3">
-                        <div class="card-body text-white">
-                            <div class="img">
-                                <div class="img-area mb-4">
-                                    <a href="/Codigos/Xt95.html"><img src="/Adicionales/Productos/G9S/Imagen principal.webp "class="img-fluid rounded-pill shadow-none p-3 mb-5 bg-info rounded"  alt=""></a>
-                                </div>
-                            </div>
-                            <h6 class="filtro">SPORT</h6>
-                            <h3>G9S SPORT</h3>
-                            <h5 class="precio">$75.000</h5>
-                            <button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button>
-                            
-                        </div>
-                    </div>
-                </div>
+                <?php }?>
+            
             </div>
         </div>
     </section>

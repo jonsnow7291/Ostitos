@@ -103,6 +103,12 @@
                         </div>
                         <input type="text" placeholder="Enlace a ficha" name="Link" class="input-control" required>    
                     </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <input type="file" name="Img" accept="image/*" class="input-control" required>    
+                    </div>
                     <div>
                         <?php
                             include("../Conexion.php"); 

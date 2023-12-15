@@ -33,13 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                        <a href="/Codigos/Inicio.php" class="nav-link text-muted">Inicio</a>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link text-muted " target="_blank">Productos</a>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link text-muted">CerrarSesion</a>
                     </li>
                 </ul>
             </div>

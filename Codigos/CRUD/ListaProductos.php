@@ -81,7 +81,7 @@
 						<td class="filas"><?php echo $fila['PrecioPro']; ?></td>
 						<td class="filas"><?php echo $fila['UniDispoPro']; ?></td>
 						<td class="filas"><br><a class="Enlace" href="/Codigos/CRUD/EditarProducto.php?IdPro=<?php echo $fila['IdPro']?>"><i class="bi bi-pencil-square"></i></a><br>
-										<br><a class="Enlace" href="/Codigos/CRUD/EliminarProductos.php?php echo $fila['IdPro']?>"><i class="bi bi-trash-fill"></i></a><br></td>
+										<br><a class="Enlace" href="/Codigos/CRUD/EliminarProductos.php?IdPro=<?php echo $fila['IdPro']?>"><i class="bi bi-trash-fill"></i></a><br></td>
 					</tr>
 					<?php }?>
 				</tbody>
