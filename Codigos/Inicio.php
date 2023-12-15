@@ -40,8 +40,8 @@
                         <li class="nav-item">
                             <a href="/Codigos/login.php" class="nav-link text-muted">Inicio de Sesion</a>
                         </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link text-muted">Registro</a>
+                        <li class="nav-item">
+                        <a href="/Codigos/registro.php" class="nav-link text-muted">Registrate</a>
                         </li>
                         
                 </ul>
