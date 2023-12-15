@@ -33,6 +33,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">    
+                        <a href="/Codigos/Productos.php" class="nav-link">Productos</a>
+                    </li>
                     <li class="nav-item">
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
@@ -43,6 +46,7 @@
                         <li class="nav-item">    
                         <a href="/Codigos/registro.php" class="nav-link">Registro</a>
                         </li>
+                        
                 </ul>
             </div>
         </div>

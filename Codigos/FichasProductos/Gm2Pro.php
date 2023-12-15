@@ -17,6 +17,7 @@
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
                         $FilaUsu=$resultadoUsu->fetch_assoc();
+                        $Rol=$FilaUsu['RolUsu'];
                         $NombreUsu=$FilaUsu['NombreUsu'];
                         $RutaP = "select * from fichas_productos where Id = 1 ";
                         $resultadoP = $conect->query($RutaP);
@@ -44,7 +45,13 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/InicioCliente.php" class="nav-link">Inicio</a>
+                    <?php
+                        if($Rol==2){
+                            echo "<a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio</a>";
+                        }elseif($Rol==1){
+                            echo "<a href='/Codigos/InicioAmin.php' class='nav-link'>Inicio</a>";
+                        }
+                        ?>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>

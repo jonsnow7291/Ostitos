@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php 
+    session_start();
+    include("Conexion.php");
+    if(isset($_SESSION['IdUsu'])){
+    $ruta="Select * from usuario where Idusu = ".$_SESSION['IdUsu'];
+    $result=mysqli_query($conect,$ruta);
+    $fila = $result->fetch_assoc();
+    $Rol= $fila['RolUsu'];
+    }
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostitos Productos</title>
@@ -24,15 +34,29 @@
                 <div class="collapse navbar-collapse" id="navbarS">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <li class="nav-item">
-                                <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
+                        <?php
+                        if($Rol==2){
+                            echo "<li class='nav-item'>
+                            <a href='/Codigos/InicioCliente.php' class='nav-link'>Inicio Cliente</a>
+                            </li>";
+                        }elseif($Rol==1){
+                            echo "<li class='nav-item'>
+                            <a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Administrador</a>
+                            </li>";
+                        }elseif(!$Rol){
+                            echo "
+                            <li class='nav-item'>
+                            <a href='/Codigos/Inicio.php' class='nav-link'>Inicio</a>
+                            </li>                         
+                            <li class='nav-item'>
+                                <a href='/Codigos/login.php' class='nav-link'>Inicio de Sesion</a>
                             </li>
-                            <li class="nav-item">    
-                            <a href="/Codigos/Productos.php" class="nav-link">Productos</a>
-                        </li>
+                            <li class='nav-item'>    
+                                <a href='/Codigos/Productos.php' class='nav-link'>Productos</a>
+                            </li>"
+                            ;
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>
