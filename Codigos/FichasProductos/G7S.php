@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/Codigos/css/estilosp.css">
 </head>
-                <!--aqui empieza el codigo de  el xt95-->
                 <?php
                         session_start();
                         include ("../Conexion.php");
@@ -30,7 +29,6 @@
                         $Imagen6 = $fila["Imagen6"];
                         $Imagen7 = $fila["Imagen7"];
                     ?>
-                <!--aqui Termina el codigo de  el xt95-->
 <body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient fixed-top">
 
@@ -95,8 +93,7 @@
             </div>
         </div>  
     </section>
-    <body>
-        <footer class="bg-black text-white pt-5 pb-4">
+    <footer class="bg-black text-white pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
@@ -130,5 +127,4 @@ En "Ostitos", nos apasiona brindar una experiencia auditiva excepcional. Ya sea 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-</body>
 </html>
