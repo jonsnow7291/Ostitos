@@ -114,8 +114,8 @@
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
-                        <a href="#" class="btn btn-primary">Mas informacion</a>
-                        <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
+                        <a href="\Codigos\FichasProductos\Xt95.php" class="btn btn-primary">Mas informacion</a>
+                        <a href="\Codigos\Productos.php" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                     </div>
                 </div>
             </div>

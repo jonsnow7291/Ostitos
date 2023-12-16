@@ -92,7 +92,7 @@
                 ?>
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="text-center pb-3">
-                        <div class="">
+                        <div class="">O
                             <div class="img">
                                 <div class="img-area mb-4">
                                 <?php
@@ -109,7 +109,6 @@
                     </div>
                 </div>
                 <?php }?>
-            
             </div>
         </div>
     </section>
@@ -120,7 +119,7 @@
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
                 <hr class="mb-4">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                Bienvenidos a "Ostitos ", la empresa líder en el comercio al por menor de audífonos inalámbricos, nos dedicamos a proporcionar experiencias auditivas excepcionales a nuestros clientes, ofreciendo productos de alta calidad que fusionan la última tecnología con un diseño elegante y ergonómico.
                 </p>
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
