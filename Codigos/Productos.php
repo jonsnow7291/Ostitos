@@ -43,6 +43,10 @@
                             echo "<li class='nav-item'>
                             <a href='/Codigos/InicioAdmin.php' class='nav-link'>Inicio Administrador</a>
                             </li>";
+                        }elseif($Rol ==3){
+                            echo "<li class='nav-item'>
+                            <a href='/Codigos/InicioTrabajador.php' class='nav-link'>Inicio Trabajador</a>
+                            </li>";
                         }elseif(!$Rol){
                             echo "
                             <li class='nav-item'>
