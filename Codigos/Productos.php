@@ -162,12 +162,12 @@
       });
 
       function addToCart(productId) {
-         // Realiza una solicitud al servidor (PHP) para agregar el producto al carrito
+
          const xhr = new XMLHttpRequest();
          xhr.open('GET', `/Codigos/agregar_al_carrito.php?product_id=${productId}`, true);
          xhr.onload = function () {
             if (xhr.status === 200) {
-               // Maneja la respuesta del servidor, por ejemplo, actualiza el número de productos en el carrito
+               
                const quantityElement = document.querySelector('.quantity');
                const totalElement = document.querySelector('.total');
                const response = JSON.parse(xhr.responseText);
@@ -175,10 +175,9 @@
                if (response.success) {
                   quantityElement.textContent = response.cartQuantity;
                   totalElement.textContent = response.cartTotal;
-                  // Puedes mostrar un mensaje de éxito al usuario si lo deseas
+
                   alert('Producto añadido al carrito con éxito.');
                } else {
-                  // Puedes mostrar un mensaje de error si lo deseas
                   alert('Error al añadir el producto al carrito.');
                }
             }
