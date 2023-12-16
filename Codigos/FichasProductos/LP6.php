@@ -90,9 +90,7 @@
                 </h5>
                 </p>
                 <div class="boton">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary">
-                    <i class="bi bi-bag-check-fill"></i>Cotizar
-                    </a>
+                                       <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
                 </div>    
             </div>
         </div>  
