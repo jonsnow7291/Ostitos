@@ -6,29 +6,16 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', () => {
+openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
-});
-
-closeShopping.addEventListener('click', () => {
+})
+closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
-});
+})
 
-let listCards = [];
-
-// Fetch products from the server
-async function fetchProducts() {
-    try {
-        const response = await fetch('/api/products');
-        const products = await response.json();
-        initApp(products);
-    } catch (error) {
-        console.error('Error fetching products:', error);
-    }
-}
-
-function initApp(products) {
-    products.forEach((value, key) => {
+let listCards  = [];
+function initApp(){
+    products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
@@ -37,11 +24,16 @@ function initApp(products) {
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Add To Card</button>`;
         list.appendChild(newDiv);
-    });
+    })
 }
-
-fetchProducts();
-
+initApp();
+function addToCard(key){
+    if(listCards[key] == null){
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1;
+    }
+    reloadCard();
+}
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
