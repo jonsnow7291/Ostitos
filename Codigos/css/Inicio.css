@@ -70,6 +70,7 @@ body{
     margin: auto;
     font-size: 18px;
     line-height: 1.9;
+
 }
 
 .img-fluid .roundad-circle{
@@ -83,7 +84,11 @@ body{
 }
 
 .navbar-dark .navbar-brand {
+
 color: rgb(244, 63, 63);
+
+color: rgb(166, 37, 37);
+
 font-size: 30px;
 text-transform: uppercase;
 font-weight: bold;
@@ -130,7 +135,7 @@ letter-spacing: 2px;
     }
     .carousel-caption a {
         padding: 10px 15px;
-        font-size: 10px;
+        font-size: 15px;
     }
     .carousel-caption p {
         width: 50%;
