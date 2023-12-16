@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/Codigos/registro.php" class="nav-link">Registrate</a>
+                    </li>
                 </ul>
             </div>
         </div>

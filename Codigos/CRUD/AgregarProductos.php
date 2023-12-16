@@ -48,7 +48,7 @@
         <div class="form-content">
             <div class="box">
                 <h3>Ingresa Nuevos Productos</h3>
-                <form action="AgregarProductos.php" method="post">
+                <form action="AgregarProductos.php" method="post" enctype="multipart/form-data">
                 <div class="input-box">
                         <div class="icons">
                             <i class="bi bi-person-fill"></i>
@@ -103,6 +103,12 @@
                         </div>
                         <input type="text" placeholder="Enlace a ficha" name="Link" class="input-control" required>    
                     </div>
+                    <div class="input-box">
+                        <div class="icons">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <input type="file" name="Img" accept="image/*" class="input-control" required>    
+                    </div>
                     <div>
                         <?php
                             include("../Conexion.php"); 
@@ -119,6 +125,6 @@
         crossorigin="anonymous"></script>
     <?php }else{ header("location:/Codigos/Errores/Error_404.html");
 
-    }?>
+    } ?>
 </body>
 </html>

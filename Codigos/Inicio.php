@@ -22,7 +22,7 @@
 <body>
 
     <!--aqui empieza el menu de navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-subtle fixed-top">
 
         <div class="container">
 
@@ -32,17 +32,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarS">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="/Codigos/Inicio.php" class="nav-link">Inicio</a>
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item">    
+                        <a href="/Codigos/Productos.php" class="nav-link text-muted">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <li class="nav-item">
-                            <a href="/Codigos/login.php" class="nav-link">Inicio de Sesion</a>
-                        </li>
-                        <li class="nav-item">    
-                        <a href="/Codigos/registro.php" class="nav-link">Registro</a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="/Codigos/login.php" class="nav-link text-muted">Inicio de Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Codigos/registro.php" class="nav-link text-muted">Registrate</a>
+                    </li>
+                        
                 </ul>
             </div>
         </div>
@@ -88,7 +89,7 @@
         <?php } ?>
     </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+        <button class=" carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
@@ -101,7 +102,7 @@
     <!--Termina el carrusel-->
     <!-- aqui empieza el mas vendido-->
     <section class="about section-padding">
-        <div class="container">
+        <div class="container bg-primary-subtle">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="about-img">
@@ -109,21 +110,23 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                    <div class="about-text text-white">
+                    <div class="about-text text-muted">
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
-                        <a href="/Codigos/login.php" class="btn btn-primary">Mas informacion</a>
+                        <a href="#" class="btn btn-primary">Mas informacion</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Añadir a carrito</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!--aqui empiezan los servicios-->
     <section class="services section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-center text-muted pb-5">
                         <h2>Nuestros servicios</h2>
                         <p>
                             Somos una empresa de tecnología, que se especializa en la venta de artículos electrónicos y cuyo énfasis se centra en la distribución de audífonos inalámbricos, contamos con diferentes tipos de productos los cuales se ajustan a tus requerimientos. Desde audífonos especiales para el gaming, hasta audífonos especiales para el trabajo. Nuestra misión es brindarte la mejor atención y calidad mediante nuestros productos, ayudando a nuestros clientes a la hora de elegir entre la gran gama de productos existen en el mercado aquellos que se adapten a lo que realmente están buscando con una excelente relación costo beneficio.
@@ -133,7 +136,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-check-fill"></i>
                             <h3 class="card-title">Registro</h3>
@@ -145,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-circle"></i>
                             <h3 class="card-title">Inicio de sesion</h3>
@@ -157,7 +160,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-cart-check-fill"></i>
                             <h3 class="card-title">Carrito</h3>
@@ -171,12 +174,13 @@
             </div>
         </div>
     </section>
+        <!--aqui terminan los servicios-->
 <!--aqui empiezan los productos destacados-->
     <section class="portafolio-section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-center text-muted pb-5">
                         <h2>Productos destacados</h2>
                         <p>
                             ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!
@@ -186,8 +190,8 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                    <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del primer producto destacado-->
                                 <?php
@@ -208,8 +212,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                    <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del segundo producto destacado-->
                                 <?php
@@ -230,8 +234,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del Tercer producto destacado-->
                                 <?php
@@ -259,7 +263,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-muted text-center text-white pb-5">
                         <h2>Asesores</h2>
                         <p> 
                             Contamos con un excelente equipo de trabajo es por esto que desde aquí puedes conocerlos mejor, recuerda que ellos siempre estarán dispuestos a atenderte tu solicitud.
@@ -270,72 +274,72 @@
 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores.<br>¡¡Te Esperamos!! 
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://api.whatsapp.com/send/?phone=%2B573103143832&text&type=phone_number&app_absent=0"><button class="btn bg-primary text-white"><i class="bi bi-whatsapp"></i><br>Whatsapp</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Instagram puedes ver aquellas fotos y videos de nuestros productos, las cuales no están publicadas en nuestra página web.
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.instagram.com/tostitos/reels/"><button class="btn bg-primary text-white"><i class="bi bi-instagram"></i><br>Instagram</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias. 
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.facebook.com/profile.php?id=100093342642922"><button class="btn bg-primary text-white"><i class="bi bi-facebook"></i><br>Facebook</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Tik tok puedes ver trends, de contenido interesante tips y consejos que te damos para el cuidado de nuestros productos
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.tiktok.com/@ostitos.coo"><button class="btn bg-primary text-white"><i class="bi bi-tiktok"></i><br>tiktok</button></a>
                         </div>
@@ -344,26 +348,37 @@
             </div>
         </div>
     </section>
+    <body>
 
-    <section class="contact section-padding">
-        <div class="container mt-5 mb-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
-                        <h2>Contacto</h2>
-                        <p>
-                            Puedes contactarnos desde una amplia gama de aplicaciones como por ejemplo mediante nuestro correo electrónico o mediante nuestras redes sociales
-                        </p>
-                    </div>
+    <footer class="bg-primary-subtle text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-muted">Nosotros</h5>
+                <hr class="mb-4">
+                <p class="text-muted">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                </p>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
+                    <hr class="mb-4">
+                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-house-door-fill"></i> PUNTO FISICO</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-telephone-fill"></i> TELEFONO</a><br>
+                    <a href="#"><i class="bi bi-envelope-fill"></i> CORREO</a><br>
+                    <a href="#"><i class="bi bi-messenger"></i> MESSENGER</a>
                 </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"> REDES SOCIALES</h5>
+                    <hr class="mb-4">
+                    <a href="https://www.facebook.com/profile.php?id=100093342642922"><i class="bi bi-facebook"></i> FACEBOOK</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-instagram"></i> INSTAGRAM</a><br>
+                    <a href="https://www.tiktok.com/@ostitos.coo"><i class="bi bi-tiktok"></i> TIKTOK</a><br>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B573103143832&text&type=phone_number&app_absent=0"><i class="bi bi-whatsapp"></i> WHATSAPP</a><br>
+                </div>
+
             </div>
         </div>
-    </section>
-    <footer class="bg-black p-2 text-center">
-        <div class="container">
-            <p class="text-white"> Ostitos.com</p>
-        </div>
     </footer>
+    </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>

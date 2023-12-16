@@ -299,10 +299,10 @@
                                 Puedes contactarnos para conocer mas sobre nosotros, mediante WhatsApp te podemos ofrecer una atención más personaliza a través de nuestros asesores <br> Te esperamos!!. 
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://api.whatsapp.com/send/?phone=%2B573103143832&text&type=phone_number&app_absent=0"><button class="btn bg-primary text-white"><i class="bi bi-whatsapp"></i><br>Whatsapp</button></a>
                         </div>
@@ -317,10 +317,10 @@
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Instagram puedes ver aquellas fotos y videos de nuestros productos, las cuales no están publicadas en nuestra página web.
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.instagram.com/tostitos/reels/"><button class="btn bg-primary text-white"><i class="bi bi-instagram"></i><br>Instagram</button></a>
                         </div>
@@ -335,10 +335,10 @@
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Facebook puedes consultar la calificación de nuestros clientes, también puedes enterarte más rápido de las nuevas noticias.
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.facebook.com/profile.php?id=100093342642922"><button class="btn bg-primary text-white"><i class="bi bi-facebook"></i><br>Facebook</button></a>
                         </div>
@@ -353,10 +353,10 @@
                                 Puedes contactarnos para conocer más sobre nosotros, mediante Tik tok puedes ver trends, de contenido interesante tips y consejos que te damos para el cuidado de nuestros productos
                             </p>
                             <p class="socials">
-                                <i class="bi bi-twitter text-white mx-1"></i>
-                                <i class="bi bi-facebook text-white mx-1"></i>
-                                <i class="bi bi-linkedin text-white mx-1"></i>
-                                <i class="bi bi-instagram text-white mx-1"></i>
+                                <i class="bi bi-twitter text-muted mx-1"></i>
+                                <i class="bi bi-facebook text-muted mx-1"></i>
+                                <i class="bi bi-linkedin text-muted mx-1"></i>
+                                <i class="bi bi-instagram text-muted mx-1"></i>
                             </p>
                             <a href="https://www.tiktok.com/@ostitos.coo"><button class="btn bg-primary text-white"><i class="bi bi-tiktok"></i><br>tiktok</button></a>
                         </div>
@@ -366,25 +366,38 @@
         </div>
     </section>
 
-    <section class="contact section-padding">
-        <div class="container mt-5 mb-5">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
-                        <h2>Contacto</h2>
-                        <p>
-                            Puedes contactarnos desde una amplia gama de aplicaciones como por ejemplo mediante nuestro correo electrónico o mediante nuestras redes sociales
-                        </p>
-                    </div>
+<!--nada-->
+    <body>
+
+    <footer class="bg-primary-subtle text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-muted">Nosotros</h5>
+                <hr class="mb-4">
+                <p class="text-muted">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                </p>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
+                    <hr class="mb-4">
+                    <a href="https://maps.app.goo.gl/vXkYKtG5JYkdGMoNA"><i class="bi bi-house-door-fill"></i> PUNTO FISICO</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-telephone-fill"></i> TELEFONO</a><br>
+                    <a href="#"><i class="bi bi-envelope-fill"></i> CORREO</a><br>
+                    <a href="#"><i class="bi bi-messenger"></i> MESSENGER</a>
                 </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary"> REDES SOCIALES</h5>
+                    <hr class="mb-4">
+                    <a href="https://www.facebook.com/profile.php?id=100093342642922"><i class="bi bi-facebook"></i> FACEBOOK</a><br>
+                    <a href="+57 310 3143832"><i class="bi bi-instagram"></i> INSTAGRAM</a><br>
+                    <a href="https://www.tiktok.com/@ostitos.coo"><i class="bi bi-tiktok"></i> TIKTOK</a><br>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B573103143832&text&type=phone_number&app_absent=0"><i class="bi bi-whatsapp"></i> WHATSAPP</a><br>
+                </div>
+
             </div>
         </div>
-    </section>
-    <footer class="bg-black p-2 text-center">
-        <div class="container">
-            <p class="text-white"> Ostitos.com</p>
-        </div>
     </footer>
+    </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
