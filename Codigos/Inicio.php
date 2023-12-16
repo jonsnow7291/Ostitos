@@ -207,7 +207,7 @@
                             </div>
                             <h3><?php echo"$NombreDestaUno";?></h3>
                             <p class="lead"><?php echo "$CaracDestaUno"; ?></p>
-                            <a href="/Codigos/login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
+                            <a href="login.php"><button class="btn bg-primary text-white">Mas informacion</button></a>
                         </div>
                     </div>
                 </div>

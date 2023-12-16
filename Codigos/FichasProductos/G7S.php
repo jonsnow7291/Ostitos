@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G9S</title>
+    <title>G7S</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -11,6 +11,7 @@
 </head>
                 <?php
                         session_start();
+                        if($_SESSION){
                         include ("../Conexion.php");
                         $rutaUsu="select * from usuario where IdUsu = ".$_SESSION['IdUsu'];
                         $resultadoUsu= mysqli_query($conect,$rutaUsu);
@@ -28,6 +29,7 @@
                         $Imagen5 = $fila["Imagen5"];
                         $Imagen6 = $fila["Imagen6"];
                         $Imagen7 = $fila["Imagen7"];
+                        }
                     ?>
 <body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient fixed-top">
@@ -53,7 +55,7 @@
                         ?>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link">Productos</a>
                     </li>
                 </ul>
             </div>

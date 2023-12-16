@@ -30,7 +30,7 @@
 <body>
 
     <!--aqui empieza el menu de navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-subtle  fixed-top">
 
         <div class="container">
 
@@ -42,19 +42,19 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Inicio</a>
+                        <a href="#" class="nav-link text-muted">Inicio</a>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link  text-muted">Productos</a>
                     </li>
                     <li class="nav-item">    
                             <?php if($resultadoUsuario&&$row= mysqli_fetch_assoc($resultadoUsuario)){
 
-                            echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link'>Cliente:".$row['NicknameUsu']."</a>";
+                            echo "<a target='_blank' href='/Codigos/Editar.php?IdUsu=".$row["IdUsu"]."' class='nav-link  text-muted'>Cliente:".$row['NicknameUsu']."</a>";
                             }  ?>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/CerrarSesion.php" class="nav-link">CerrarSesion</a>
+                        <a href="/Codigos/CerrarSesion.php" class="nav-link  text-muted">CerrarSesion</a>
                     </li>
                 </ul>
             </div>
@@ -119,7 +119,7 @@
     <!--Termina el carrusel-->
     <!-- aqui empieza el mas vendido-->
     <section class="about section-padding">
-        <div class="container">
+        <div class="container bg-primary-subtle">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="about-img">
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                    <div class="about-text text-white">
+                    <div class="about-text text-muted">
                         <center><h2> El mas vendido!! </h2></center>
                         <?php echo "<h2>".$NombreMV."</h2>";?>
                         <?php echo "<p>".$CaracMV."</p>";?>
@@ -142,7 +142,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-center text-muted pb-5">
                         <h2>Nuestros servicios</h2>
                         <p>
                             Somos una empresa de tecnología, que se especializa en la venta de artículos electrónicos y cuyo énfasis se centra en la distribución de audífonos inalámbricos, contamos con diferentes tipos de productos los cuales se ajustan a tus requerimientos. Desde audífonos especiales para el gaming, hasta audífonos especiales para el trabajo. Nuestra misión es brindarte la mejor atención y calidad mediante nuestros productos, ayudando a nuestros clientes a la hora de elegir entre la gran gama de productos existen en el mercado aquellos que se adapten a lo que realmente están buscando con una excelente relación costo beneficio.
@@ -152,7 +152,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-check-fill"></i>
                             <h3 class="card-title">Registro</h3>
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-person-circle"></i>
                             <h3 class="card-title">Inicio de sesion</h3>
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-white text-center bg-dark pb-2">
+                    <div class="card text-muted text-center bg-primary-subtle pb-2">
                         <div class="card-body">
                             <i class="bi bi-cart-check-fill"></i>
                             <h3 class="card-title">Carrito</h3>
@@ -195,7 +195,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-center text-muted pb-5">
                         <h2>Productos destacados</h2>
                         <p>
                             ¡Ojea los productos preferidos por la comunidad o aquellos que cuentan con excelentes descuentos!</p>
@@ -204,8 +204,8 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                    <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del primer producto destacado-->
                                 <?php
@@ -227,8 +227,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                    <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del primer producto destacado-->
                                 <?php
@@ -250,8 +250,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                <div class="card text-light text-center bg-primary-subtle pb-2">
+                        <div class="card-body text-muted">
                             <div class="img-area mb-4">
                                 <!--aqui empeza el codigo del tercer producto destacado-->
                                 <?php
@@ -280,7 +280,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-header text-center text-white pb-5">
+                    <div class="section-header text-muted text-center text-white pb-5">
                         <h2>Asesores</h2>
                         <p> 
                             Contamos con un excelente equipo de trabajo es por esto que desde aquí puedes conocerlos mejor, recuerda que ellos siempre estarán dispuestos a atenderte tu solicitud.
@@ -291,8 +291,8 @@
 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -309,8 +309,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -327,8 +327,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">
@@ -345,8 +345,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card text-center bg-dark">
-                        <div class="card-body text-white">
+                    <div class="card text-center bg-primary-subtle">
+                        <div class="card-body text-muted">
                             <img src="/Adicionales/Imagen principal/logos/logo.png" class="img-fluid roundad-circle" alt="">
                             <h3 class="card-title py-2">Contactanos</h3>
                             <p class="card-text">

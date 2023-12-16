@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G9S</title>
+    <title>Xt95</title>
     <link rel="shortcut icon" href="/Adicionales/Imagen principal/logos/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -55,7 +55,7 @@
                         ?>
                     </li>
                     <li class="nav-item">    
-                        <a href="/Codigos/Productos.php" class="nav-link" target="_blank">Productos</a>
+                        <a href="/Codigos/Productos.php" class="nav-link" >Productos</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +90,7 @@
                 </h5>
                 </p>
                 <div class="boton">
-                                       <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $IdUsu?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20<?php echo $Rol?>%20de%20ostitosestoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
+                                       <a target="_blank" href="https://api.whatsapp.com/send?phone=+573213994319&text=Hola%20Mi%20Id%20es%20<?php echo $fila['IdUsu'] ?>%20Mi%20Nombre%20es:%20<?php echo $NombreUsu?>%20estoy%20interesad@%20en%20el%20producto:%20<?php echo $Nombre ?>%20el%20cual%20aparece%20en%20este%20momento%20en%20la%20pagina%20ostitos%20por%20el%20siguiente%20precio%20<?php echo $fila['Precio']?>%20me%20podrian%20dar%20mas%20detalles%20respecto%20a%20este???" class="btn btn-primary"><i class="bi bi-bag-check-fill"></i>Cotizar</a>
                 </div>    
             </div>
         </div>  
