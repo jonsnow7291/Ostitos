@@ -375,7 +375,7 @@
                 <h5 class="text-uppercase mb-4 font-weight-bold text-muted">Nosotros</h5>
                 <hr class="mb-4">
                 <p class="text-muted">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi veniam cupiditate dolore esse! Voluptate non officiis harum optio iure totam nostrum maiores quae quidem odio. Quis laboriosam doloribus est ipsa?
+                Bienvenidos a "Ostitos ", la empresa líder en el comercio al por menor de audífonos inalámbricos, nos dedicamos a proporcionar experiencias auditivas excepcionales a nuestros clientes, ofreciendo productos de alta calidad que fusionan la última tecnología con un diseño elegante y ergonómico.
                 </p>
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-primary">CONTACTANOS</h5>
