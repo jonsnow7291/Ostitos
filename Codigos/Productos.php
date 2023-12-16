@@ -103,6 +103,7 @@
                             <h6 class="filtro">GAMER</h6>
                             <h3><?php echo $fila['NombrePro']?>
                             <h5 class="precio">$<?php echo $fila['PrecioPro']?></h5>
+                            <a href=""><button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button></a>
                             <a href="<?php echo $fila['linkProducto']?>"><button class="btn bg-primary text-white"><i class="bi bi-bag-check-fill"></i><br>Añadir a carrito</button></a>
                         </div>
                     </div>
