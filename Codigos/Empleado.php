@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarS">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="/Codigos/InicioAdmin.php" class="nav-link text-muted">Inicio</a>
+                        <a href="/Codigos/InicioTrabajador.php" class="nav-link text-muted">Inicio</a>
                     </li>
                     <li class="nav-item">    
                         <a href="/Codigos/Productos.php" class="nav-link text-muted " target="_blank">Productos</a>
@@ -55,25 +55,25 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/Adicionales/ImgsAdminInicio/Carousel/Bienvenida.jpg" class="d-block w-100" alt="">
+                <img src="/Adicionales/funciones empleado/christin-hume-Hcfwew744z4-unsplash.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
                     <?php
-                        echo "<h5>Bienvevenido Admin :".$filas['NicknameUsu']."</h5>";
+                        echo "<h5>Bienvevenid@ Empleada :".$filas['NicknameUsu']."</h5>";
                         ?>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/Adicionales/ImgsAdminInicio/Carousel/Sebas.jpg" class="d-block w-100" alt="">
+                <img src="/Adicionales/funciones empleado/c-d-x-PDX_a_82obo-unsplash.jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5>Administra tus productos</h5>
+                    <h5>Mira el stock</h5>
                     
-                    <a href="/Codigos/CRUD/ListaProductos.php" class="btn btn-primary mt">Administrar</a>
+                    <a href="/Codigos/CRUD/ListaProductos.php" class="btn btn-primary mt">Mirar</a>
                 </div>
             </div>
             <div class="carousel-item">
-            <img src="/Adicionales/ImgsAdminInicio/Carousel/Daniel Y Miguel.jpg" class="d-block w-100" alt="">
+            <img src="/Adicionales/funciones empleado/linkedin-sales-solutions-hMLDD0Gyd4A-unsplash(1).jpg" class="d-block w-100" alt="">
                 <div class="carousel-caption">
-                    <h5>Administra tu base de usuarios</h5>
+                    <h5>Mira tus ventas</h5>
                     
                     <a href="/Codigos/CRUD/ListaUsuariosNueva.php" class="btn btn-primary mt">Administrar</a>
                 </div>
