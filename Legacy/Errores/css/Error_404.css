@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+text-align: center;
+background-image: url(Errores/adicionales/imagenes/olas-azules-abstracto_1920x1080_xtrafondos.com.jpg);
+font-family: 'Raleway', sans-serif;
+}
+
+.error_404_titulo{
+    margin: auto;
+}
+
+.error_404_contenedor{
+    background-color: #1d0c4a;
+    height: 100px;
+    width: 80rem;
+    margin: auto;
+    border-radius: 10px;
+}
+.error_404_boton{
+    height: 40px;
+    width: 400px;
+    background-color: rgb(16, 73, 129);
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+}
+.error_404_boton:hover{
+    background-color: #0c374a;
+    transition: 2s;
+}
+.error_404_boton_text{
+    text-decoration: none;
+    color: aliceblue;
+}
+.error_404_contenedor2{
+    background-color: #0f55bd;
+    height: 100px;
+    width: 800px;
+    margin: auto;
+    border-radius: 25px;
+}
